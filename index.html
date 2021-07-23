@@ -63,6 +63,43 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
           
+              <tr onmouseout="flash_stop()" onmouseover="flash_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='flash_image'>
+                  <img src='images/sr_iccv21_after.jpg' width="160"></div>
+                <img src='images/sr_iccv21_before.jpg' width="160">
+              </div>
+              <script type="text/javascript">
+                function flash_start() {
+                  document.getElementById('flash_image').style.opacity = "1";
+                }
+
+                function flash_stop() {
+                  document.getElementById('flash_image').style.opacity = "0";
+                }
+                videodepth_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+                <papertitle> Reference-based Super-resolution with Aligned Attention Modules </papertitle>
+              </a>
+              <br>
+              <strong>  Tengfei Wang*</strong>, Jiaxin Xie, Qiong Yan, Wenxiu Sun, Qifeng Chen 
+              <br>
+              <em>ICCV </em>, 2021  
+              <br>
+              <a href="https://arxiv.org/ ">arxiv</a> / 
+              <a href="https://github.com/">code</a> / 
+              <a href="https://tengfei-wang.github.io/index.html">project website</a> 
+              <p></p>
+              <p style="color:red">   </p>
+            </td>
+          </tr>     
+
+
+          
+          
            <tr onmouseout="flash_stop()" onmouseover="flash_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
