@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>EII</title>
+    <title>Implicit-Internal-Video-Inpainting</title>
     <meta name="author" content="Tengfei Wang">
     <meta name="description" content="Project page of video inpainting paper, ICCV 2021">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -166,7 +166,7 @@
             <img src="./extension.jpg" class="img-responsive" alt="extension" class="center"><br>
  
                <h4>
-                Single-frame Object Removal 
+                <strong> Single-frame Object Removal </strong>
               </h4>          
               <p class="text-justify">
                 Removing objects in video sequences using only a single frame mask is highly preferred to decrease the involved human labor. We show that by 
@@ -174,6 +174,28 @@
               </p>          
             <img src="./single-frame.jpg" class="img-responsive" alt="Single-frame Object Removal" class="center"><br>
 
+               <h4>
+                <strong> Video Inpainting for Multiple Domains </strong>
+              </h4>          
+              <p class="text-justify">
+              Most recent video inpainting methods are trained on large video datasets to achieve promising completion performance. Prior internal methods also rely on 
+              well-trained and off-the-shelf optical flow estimation networks  trained on a target domain. However, the dataset collection process is time-consuming and
+               labor-intensive, and these methods may suffer from performance drop when test videos are in different domains from training videos.        
+              Our implicit internal video inpainting method can be helpful when we only want to inpaint/edit  few videos from a new domain, but  do not want to spend days
+                and dollars on collecting hundreds of videos  from the same domain, and training a large network. 
+              </p>          
+            <img src="./multi-domain.jpg" class="img-responsive" alt="multi-domain" class="center"><br>            
+ 
+            
+            
+                           <h4>
+                <strong> Video Inpainting for 4K videos </strong>
+              </h4>          
+              <p class="text-justify">
+                Our  formulation possesses great flexibility to extend to more challenging settings: completing ultra high-resolution image sequences, such as
+                videos with 4K resolution.
+              </p>          
+            <img src="./4k.jpg" class="img-responsive" alt="multi-domain" class="center"><br>   
           </div>
         </div>
       
