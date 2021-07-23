@@ -1,1 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>EII</title>
+    <meta name="author" content="Tengfei Wang">
+    <meta name="description" content="Project page of video inpainting paper, ICCV 2021">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="eccv_logo.png">
+    <!-- Format -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="../format/app.css">
+    <link rel="stylesheet" href="../format/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    <script src="../format/app.js"></script>
 
+  </head>
+
+  <body>
+    <div class="container" id="main">
+        <div class="row">
+            <h1 class="col-md-12 text-center">
+                Internal Video Inpainting by Implicit Long-range Propagation <br /> 
+         
+                <small>
+                    ICCV 2021
+                </small>
+            </h1>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a >
+                          Hao Ouyang*
+                        </a>
+                        <br /> &nbsp
+                    </li>
+
+                    <li>
+                        <a>
+                            Tengfei Wang*
+                      </a>
+                        <br />HKUST
+                    </li>
+
+                    <li>
+                        <a href="https://cqf.io/">
+                           Qifeng Chen
+                        </a>
+                        <br /> &nbsp
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+        <!-- ##### Elements #####-->
+        <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="   ">
+                            <img src="./paper.jpg" height="120px"><br>
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+
+                            <a href="  ">
+                            <img src="../images/youtube_icon.jpg" height="120px"><br>
+                                <h4><strong>Slide</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Tengfei-Wang/ImplicitVideoInpainting">
+                            <img src="../images/github_icon.jpg" height="120px"><br>
+                                <h4><strong>Code</strong></h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
+
+
+
+        <!-- ##### Abstract #####-->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <p class="text-justify">
+
+                  Although recent inpainting approaches have demonstrated significant improvement with deep neural networks, 
+                  they still suffer from artifacts such as blunt structures and abrupt colors when filling in the missing regions.
+                  To address these issues, we propose an external-internal inpainting scheme with monochromic bottleneck that 
+                  helps image inpainting models remove these artifacts.  In the external learning stage, we reconstruct missing 
+                  structures and details in the monochromic space to reduce the learning dimension.  In the internal learning stage, 
+                  we propose a novel internal color propagation method with progressive learning strategies for consistent color 
+                  restoration.  Extensive experiments demonstrate that our proposed scheme help image inpainting models produce more 
+                  structure-preserved and visually compelling results.
+                </p>
+            </div>
+        </div>
+
+        
+
+
+        <!-- ##### Motivation #####-->
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+              <h3>
+                Motivation 
+              </h3>
+              <p class="text-justify">
+              Early image inpainting networks trained on large datasets usually suffer from the ``color bleeding'' artifacts.
+              Colors in the inpainted area of previous approaches show abrupt discrepancy from non-missing regions. For example,
+               the green and pink color in the first image, and the purple color in the second image are very different from the 
+              color distribution of non-missing parts. This distribution gap indicates the possibility of improving inpainting
+                quality by eliminating outliner colors in the missing region. Hence, we are motivated to further improve the color 
+                consistency by learning only from the internal color distribution of the non-missing parts. 
+
+                To show the visual quality gain brought by the internal colorization, we apply our  method to re-colorize the results 
+                of previous inpainting approaches. As in Figure, by strengthening the impact of internal color 
+                statistics in the single image, the abrupt colors can be eliminated. 
+                
+                However, learning only from internal statistics is inappropriate since external information is significant for 
+                content-aware image inpainting. A feasible solution is to set an intermediate bottleneck as a bridge between the
+                external and internal learning. In traditional image reconstruction tasks, many researchers utilize monochromes to
+                learn structures and then directly add color information back. Inspired from these
+                works, we choose monochrome images as the intermediate output. This leads to another advantage that by reducing the
+                output dimension from $R^3$ to $R^1$, the complexity of training is alleviated. We expect that models 
+                trained with monochromic bottleneck can reconstruct higher-fidelity structures than original ones.
+              </p>
+              
+            <img src="./recolor.jpg" class="img-responsive" alt="recolor" class="center"><br>
+
+          </div>
+        </div>
+
+        <!-- ##### Architecture #####-->
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+              <h3>
+                Architecture 
+              </h3>
+              
+              <p class="text-justify">
+              Overview of our external-internal inpainting method. It externally learns to reconstruct  structures
+                in the monochromic space via training on large datasets, while implicitly propagates colors within
+                the single test image via internal learning. The colorization loss  is only calculated on the  unmasked regions.
+              </p>
+            <img src="./method.jpg" class="img-responsive" alt="recolor" class="center"><br>
+              
+            
+
+          </div>
+        </div>
+        
+        <!-- ##### BibTex #####-->
+        <hr>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    BibTeX
+                </h3>
+ 
+                <div class="row align-items-center">
+                    <div class="col py-3">
+                        <pre class="border">
+@inproceedings{ouyang2021video,
+  title={Internal Video Inpainting by Implicit Long-range Propagation},
+  author={Ouyang, Hao and Wang, Tengfei and and Chen, Qifeng},
+  booktitle={International Conference on Computer Vision (ICCV) },
+  year={2021}
+}
+</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
