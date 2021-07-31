@@ -20,6 +20,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
     <script src="../format/app.js"></script>
 
+	<link rel="stylesheet" href="../juxtapose/css/juxtapose.css">
+	<style>
+		.juxtapose {
+			max-width: 8000px;
+		}
+		.jx-slider {
+			margin-top: 1em;
+		}
+	</style>
+    
   </head>
 
   <body>
@@ -120,10 +130,6 @@
             </div>
         </div>
 
-        
-
-
-      
 
         <!-- ##### Architecture #####-->
         <div class="row">
@@ -151,7 +157,16 @@
     </div>
   </div>
       
-      
+ 
+
+	<div class="juxtapose">
+		<img class="left" src="./images/wide1.jpg" data-label="Wide-angle" alt="Wide-angle" data-credit=""/>
+		<img class="right" src="./images/output1.jpg" data-label="Ours" alt="Ours" data-credit="" />
+	</div>
+
+	<script src='../juxtapose/js/juxtapose.js'></script>
+ 
+     
         <!-- ##### BibTex #####-->
         <hr>
         <div class="row">
