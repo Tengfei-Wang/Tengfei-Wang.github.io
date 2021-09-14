@@ -26,7 +26,7 @@
     <div class="container" id="main">
         <div class="row">
             <h1 class="col-md-12 text-center">
-               HFGI  <br /> 
+               High-Fidelity GAN Inversion for Image Attribute Editing  <br /> 
          
 <!--                 <small>
                     
@@ -110,8 +110,6 @@
                 </div>
         </div>
 
-      
-
 
         <!-- ##### Abstract #####-->
         <div class="row">
@@ -120,14 +118,18 @@
                     Abstract
                 </h3>
                 <p class="text-justify">
-
-                  We propose a novel framework for video inpainting by adopting an internal learning strategy. Unlike previous methods that use 
-                  optical flow for cross-frame context propagation to inpaint unknown regions, we show that this can be achieved implicitly by 
-                  fitting a convolutional neural network to the known region.  Moreover, to handle challenging sequences with ambiguous backgrounds 
-                  or long-term occlusion, we design two regularization terms to preserve high-frequency details and long-term temporal consistency.
-                  Extensive experiments on the DAVIS dataset demonstrate that the proposed method achieves state-of-the-art inpainting quality 
-                  quantitatively and qualitatively. We further extend the proposed method to another challenging task: learning to remove an object 
-                  from a video giving a single object mask in only one frame in a 4K video. 
+                We present a novel high-fidelity generative adversarial network (GAN) inversion framework
+                  that enables attribute editing with image-specific details well-preserved (e.g., 
+                  background, appearance and illumination). We first formulate GAN inversion as a lossy 
+                  data compression problem and carefully discuss the Rate-Distortion-Edit trade-off. Due 
+                  to this trade-off, previous works fail to achieve high-fidelity reconstruction while keeping
+                  compelling editing ability with a low bit-rate latent code only.  In this work, we propose
+                  a distortion consultation approach that employs the distortion map as a  reference for 
+                  reconstruction. In the distortion consultation inversion (DCI), the distortion map is first 
+                  projected to a high-rate latent map, which then complements the basic low-rate latent code
+                  with (lost) details via consultation fusion. To achieve high-fidelity editing, we propose an 
+                  adaptive distortion alignment (ADA) module with a self-supervised training scheme. Extensive 
+                  experiments in the face and car domains show a clear improvement in terms of both inversion and editing quality.
                 </p>
             </div>
         </div>
