@@ -1,1 +1,433 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Implicit-Internal-Video-Inpainting</title>
+    <meta name="author" content="Tengfei Wang">
+    <meta name="description" content="Project page of video inpainting paper, ICCV 2021">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="eccv_logo.png">
+    <!-- Format -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="../format/app.css">
+    <link rel="stylesheet" href="../format/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    <script src="../format/app.js"></script>
 
+  </head>
+
+  <body>
+    <div class="container" id="main">
+        <div class="row">
+            <h1 class="col-md-12 text-center">
+                Internal Video Inpainting by Implicit Long-range Propagation <br /> 
+         
+                <small>
+                    ICCV 2021
+                </small>
+            </h1>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a >
+                          Hao Ouyang*
+                        </a>
+                        <br /> &nbsp
+                        <br /> &nbsp
+                    </li>
+
+                    <li>
+                        <a>
+                            Tengfei Wang*
+                      </a>
+                        <br />HKUST
+                      <br /> * Denotes Equal Contribution
+                    </li>
+
+                    <li>
+                        <a href="https://cqf.io/">
+                           Qifeng Chen
+                        </a>
+                        <br /> &nbsp
+                        <br /> &nbsp
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+        <!-- ##### Elements #####-->
+        <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="https://arxiv.org/abs/2108.01912">
+                            <img src="./paper.jpg" height="100px"><br>
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+
+                            <a href="https://www.youtube.com/watch?v=VlDSJtmBqBs">
+                            <img src="../images/youtube_icon.jpg" height="100px"><br>
+                                <h4><strong>Video</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Tengfei-Wang/ImplicitVideoInpainting">
+                            <img src="../images/github_icon.jpg" height="100px"><br>
+                                <h4><strong>Code</strong></h4>
+                            </a>
+                        </li>
+                      
+                        <li>
+                            <a href="https://github.com/Tengfei-Wang/Annotated-4K-Videos">
+                            <img src="../images/dataset.png" height="100px"><br>
+                                <h4><strong>Data</strong></h4>
+                            </a>
+                        </li>
+                      
+                    </ul>
+                </div>
+        </div>
+
+      
+
+
+        <!-- ##### Abstract #####-->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <p class="text-justify">
+
+                  We propose a novel framework for video inpainting by adopting an internal learning strategy. Unlike previous methods that use 
+                  optical flow for cross-frame context propagation to inpaint unknown regions, we show that this can be achieved implicitly by 
+                  fitting a convolutional neural network to the known region.  Moreover, to handle challenging sequences with ambiguous backgrounds 
+                  or long-term occlusion, we design two regularization terms to preserve high-frequency details and long-term temporal consistency.
+                  Extensive experiments on the DAVIS dataset demonstrate that the proposed method achieves state-of-the-art inpainting quality 
+                  quantitatively and qualitatively. We further extend the proposed method to another challenging task: learning to remove an object 
+                  from a video giving a single object mask in only one frame in a 4K video. 
+                </p>
+            </div>
+        </div>
+
+ 
+
+        <!-- ##### Results #####-->
+   
+     <div class="row">     
+       
+     <div class="col-md-8 col-md-offset-2">
+          <h3>
+              Results
+          </h3>   
+    </div>      
+      
+    <table width="100%" style="margin: 15pt auto; text-align: center;">      
+      <tr>
+          <td>
+            <video width="300"  controls >
+                <source src="./inputs/horsejump-high.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+          </td>
+        
+          <td>
+            <video width="300"  controls>
+                <source src="./inputs/shooting.mp4" type="video/mp4">
+            </video>
+          </td>
+        
+          <td>
+            <video width="300"   controls>
+                <source src="./inputs/tennis.mp4" type="video/mp4">
+            </video>
+          </td>        
+        
+          <td>
+            <video width="300"   controls>
+                <source src="./inputs/boxing-fisheye.mp4" type="video/mp4">
+            </video>
+          </td>              
+      </tr>      
+      
+      
+      
+      
+      <tr>
+          <td>
+            <video width="300"  controls >
+                <source src="./results/horsejump-high.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+          </td>
+        
+          <td>
+            <video width="300"  controls>
+                <source src="./results/shooting.mp4" type="video/mp4">
+            </video>
+          </td>
+        
+          <td>
+            <video width="300"   controls>
+                <source src="./results/tennis.mp4" type="video/mp4">
+            </video>
+          </td>        
+        
+          <td>
+            <video width="300"   controls>
+                <source src="./results/boxing-fisheye.mp4" type="video/mp4">
+            </video>
+          </td>              
+      </tr>
+      
+      
+     <tr>
+          <td>
+            <video width="300"  controls >
+                <source src="./inputs/mallard-water.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+          </td>
+        
+          <td>
+            <video width="300"  controls>
+                <source src="./inputs/lucia.mp4" type="video/mp4">
+            </video>
+          </td>
+        
+          <td>
+            <video width="300"   controls>
+                <source src="./inputs/gold-fish.mp4" type="video/mp4">
+            </video>
+          </td>        
+        
+          <td>
+            <video width="300"   controls>
+                <source src="./inputs/dance-jump.mp4" type="video/mp4">
+            </video>
+          </td>              
+      </tr>            
+      
+      
+       
+     <tr>
+          <td>
+            <video width="300"  controls >
+                <source src="./results/mallard-water.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+          </td>
+        
+          <td>
+            <video width="300"  controls>
+                <source src="./results/lucia.mp4" type="video/mp4">
+            </video>
+          </td>
+        
+          <td>
+            <video width="300"   controls>
+                <source src="./results/gold-fish.mp4" type="video/mp4">
+            </video>
+          </td>        
+        
+          <td>
+            <video width="300"   controls>
+                <source src="./results/dance-jump.mp4" type="video/mp4">
+            </video>
+          </td>              
+      </tr>             
+      
+
+       <tr>
+          <td>
+            <video width="300"  controls >
+                <source src="./inputs/crossing.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+          </td>
+        
+          <td>
+            <video width="300"  controls>
+                <source src="./inputs/motocross-bumps.mp4" type="video/mp4">
+            </video>
+          </td>
+        
+          <td>
+            <video width="300"   controls>
+                <source src="./inputs/motorbike.mp4" type="video/mp4">
+            </video>
+          </td>        
+        
+          <td>
+            <video width="300"   controls>
+                <source src="./inputs/paragliding-launch.mp4" type="video/mp4">
+            </video>
+          </td>              
+      </tr>         
+      
+     <tr>
+          <td>
+            <video width="300"  controls >
+                <source src="./results/crossing.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+          </td>
+        
+          <td>
+            <video width="300"  controls>
+                <source src="./results/motocross-bumps.mp4" type="video/mp4">
+            </video>
+          </td>
+        
+          <td>
+            <video width="300"   controls>
+                <source src="./results/motorbike.mp4" type="video/mp4">
+            </video>
+          </td>        
+        
+          <td>
+            <video width="300"   controls>
+                <source src="./results/paragliding-launch.mp4" type="video/mp4">
+            </video>
+          </td>              
+      </tr>         
+  
+    </table>          
+      </div>
+          
+
+
+        <!-- ##### Approach #####-->
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+              <h3>
+                Approach 
+              </h3>
+              
+              <p class="text-justify">
+              Overview of our internal video inpainting method. Without optical flow estimation and training on large datasets, we learn the implicit 
+                propagation via intrinsic properties of natural videos and neural network. By learning internally on augmented frames, the network f  
+                serves as a neural memory function for long-range information. When inference, cross-frame contextual information is implicitly propagated
+                to complete masked regions. For non-ideal cases of deficiency and ambiguity where cross-frame information is unavailable or ambiguous, we
+                design two regularization terms for perceptually-realistic and temporally-consistent reconstruction.
+              </p>
+            <img src="./method.jpg" class="img-responsive" alt="method" class="center"><br>
+
+          </div>
+        </div>
+
+      
+          <!-- ##### Extensions #####-->
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+              <h3>
+                Extensions 
+              </h3>
+              
+            <img src="./extension.jpg" class="img-responsive" alt="extension" class="center"><br>
+            
+               <h4>
+                <strong> Video Inpainting for Multiple Domains </strong>
+              </h4>          
+              <p class="text-justify">
+              Most recent video inpainting methods are trained on large video datasets to achieve promising completion performance. Prior internal methods also rely on 
+              well-trained and off-the-shelf optical flow estimation networks  trained on a target domain. However, the dataset collection process is time-consuming and
+               labor-intensive, and these methods may suffer from performance drop when test videos are in different domains from training videos.        
+              Our implicit internal video inpainting method can be helpful when we only want to inpaint/edit  few videos from a new domain, but  do not want to spend days
+                and dollars on collecting hundreds of videos  from the same domain, and training a large network. 
+              </p>          
+            <img src="./multi-domain.jpg" class="img-responsive" alt="multi-domain" class="center"><br>    
+            
+            
+               <h4>
+                <strong> Single-frame Object Removal </strong>
+              </h4>          
+              <p class="text-justify">
+                Removing objects in video sequences using only a single frame mask is highly preferred to decrease the involved human labor. We show that by 
+                exchanging the input and the output in the above formulation,  the proposed scheme can also propagate a given object mask to other frames.
+              </p>          
+            <img src="./single-frame.jpg" class="img-responsive" alt="Single-frame Object Removal" class="center"><br>
+
+         
+ 
+            
+            
+                           <h4>
+                <strong> Video Inpainting for 4K videos </strong>
+              </h4>          
+              <p class="text-justify">
+                Our  formulation possesses great flexibility to extend to more challenging settings: completing ultra high-resolution image sequences, such as
+                videos with 4K resolution.
+              </p>          
+            <img src="./4k.jpg" class="img-responsive" alt="multi-domain" class="center"><br>   
+          </div>
+        </div>
+      
+         <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    More Results & Data
+                </h3>   
+            
+            The 4K video sequences we annotated and used can be found in <a href="https://github.com/Tengfei-Wang/Annotated-4K-Videos"> 4K data </a>. </br>  
+            </br>  
+      
+           We  put more our results (70 videos on Davis) in the <a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/tfwang_connect_ust_hk/EmtOPEAarqdFj4yDLECg2oABsylzC4lKjuFyyg7o2TTdyQ"> OneDrive </a> 
+          for your reference :) </br>  
+           Our method is simple and the results are promising. However, there are also some failure 
+             cases, which are also put in the <a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/tfwang_connect_ust_hk/EmtOPEAarqdFj4yDLECg2oABsylzC4lKjuFyyg7o2TTdyQ"> OneDrive </a>. </br>  
+                </br>  
+            In case you need the PNG version of our uncompressed results, please email the authors. </br>  
+
+              <div class="text-center">
+                  <div style="position:relative;padding-top:56.25%;">
+                    <iframe width="560" height="315" src="https://youtube.com/embed/VlDSJtmBqBs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                    </br>  
+                </div>
+              </div>
+          </div>
+        </div> 
+      
+       
+        <!-- ##### BibTex #####-->
+        <hr>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    BibTeX
+                </h3>
+ 
+                <div class="row align-items-center">
+                    <div class="col py-3">
+                        <pre class="border">
+@inproceedings{wang2021HFGI,
+  title={ },
+  author={ },
+  booktitle={ },
+  year={2021}
+}
+</pre>
+                    </div>
+                </div>
+              
+    
+          </div>
+          
+        </div>
+
+    </div>
+</body>
+</html>
