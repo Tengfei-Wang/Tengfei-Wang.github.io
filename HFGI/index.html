@@ -122,22 +122,23 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
 <!--                 It seems that arxiv fails to properly compile the pdf file, so I put the pdf file in the repo as a remedy:( -->
+              
+                Want to play with your photos without cloning the code? Try our <a href="https://replicate.com/tengfei-wang/hfgi"> ONLINE DEMO </a> for fun!
                 <h3>
                     Abstract
                 </h3>
                 <p class="text-justify">
-                We present a novel high-fidelity generative adversarial network (GAN) inversion framework
-                  that enables attribute editing with image-specific details well-preserved (e.g., 
-                  background, appearance and illumination). We first formulate GAN inversion as a lossy 
-                  data compression problem and carefully discuss the Rate-Distortion-Edit trade-off. Due 
-                  to this trade-off, previous works fail to achieve high-fidelity reconstruction while keeping
-                  compelling editing ability with a low bit-rate latent code only.  In this work, we propose
-                  a distortion consultation approach that employs the distortion map as a  reference for 
-                  reconstruction. In the distortion consultation inversion (DCI), the distortion map is first 
-                  projected to a high-rate latent map, which then complements the basic low-rate latent code
-                  with (lost) details via consultation fusion. To achieve high-fidelity editing, we propose an 
-                  adaptive distortion alignment (ADA) module with a self-supervised training scheme. Extensive 
-                  experiments in the face and car domains show a clear improvement in terms of both inversion and editing quality.
+               We present a novel high-fidelity generative adversarial network (GAN) inversion framework that enables attribute editing with
+                  image-specific details well-preserved (e.g., background, appearance, and illumination). We first analyze the challenges of
+                  high-fidelity GAN inversion from the perspective of lossy data compression.  With a low bit-rate latent code, previous works
+                  have difficulties in preserving high-fidelity details in reconstructed and edited images. Increasing the size of a latent 
+                  code can improve the accuracy of GAN inversion but at the cost of inferior editability. To improve image fidelity without 
+                  compromising editability, we propose a distortion consultation approach that employs a distortion map as a reference for  
+                  high-fidelity reconstruction. In the distortion consultation inversion (DCI), the distortion map is first projected to a 
+                  high-rate latent map, which then complements the basic low-rate latent code with more details via consultation fusion. 
+                  To achieve high-fidelity editing, we propose an adaptive distortion alignment (ADA) module with a self-supervised training scheme,
+                  which bridges the gap between the edited and inversion images. Extensive experiments in the face and car domains show a clear
+                  improvement in both inversion and editing quality. 
                 </p>
             </div>
         </div>
@@ -404,9 +405,7 @@
  
                 <div class="row align-items-center">
                     <div class="col py-3">
-                        <pre class="border">
-                        
-
+                        <pre class="border">             
 @inproceedings{wang2021HFGI,
   title={High-Fidelity GAN Inversion for Image Attribute Editing},
   author={Wang, Tengfei and Zhang, Yong and Fan, Yanbo and Wang, Jue and Chen, Qifeng},
