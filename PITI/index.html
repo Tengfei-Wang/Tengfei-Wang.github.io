@@ -120,6 +120,16 @@
         </div>
 
 
+      
+              <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Diverse samples synthesized by our approach.
+                </h3>
+                  <img src="./figure/diverse.jpg" class="img-responsive" alt="samples" class="center"><br>
+            </div>
+        </div>
+
 
 
         <!-- ##### Abstract #####-->
@@ -149,30 +159,10 @@
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
               <h3>
-                Motivation 
+                Comaprison with other methods. 
               </h3>
-              <p class="text-justify">
-              Early image inpainting networks trained on large datasets usually suffer from the ``color bleeding'' artifacts.
-              Colors in the inpainted area of previous approaches show abrupt discrepancy from non-missing regions. For example,
-               the green and pink color in the first image, and the purple color in the second image are very different from the 
-              color distribution of non-missing parts. This distribution gap indicates the possibility of improving inpainting
-                quality by eliminating outliner colors in the missing region. Hence, we are motivated to further improve the color 
-                consistency by learning only from the internal color distribution of the non-missing parts. 
-
-                To show the visual quality gain brought by the internal colorization, we apply our  method to re-colorize the results 
-                of previous inpainting approaches. As in Figure, by strengthening the impact of internal color 
-                statistics in the single image, the abrupt colors can be eliminated. 
-                
-                However, learning only from internal statistics is inappropriate since external information is significant for 
-                content-aware image inpainting. A feasible solution is to set an intermediate bottleneck as a bridge between the
-                external and internal learning. In traditional image reconstruction tasks, many researchers utilize monochromes to
-                learn structures and then directly add color information back. Inspired from these
-                works, we choose monochrome images as the intermediate output. This leads to another advantage that by reducing the
-                output dimension from $R^3$ to $R^1$, the complexity of training is alleviated. We expect that models 
-                trained with monochromic bottleneck can reconstruct higher-fidelity structures than original ones.
-              </p>
               
-            <img src="./recolor.jpg" class="img-responsive" alt="recolor" class="center"><br>
+            <img src="./figure/1.jpg" class="img-responsive" alt="comparison" class="center"><br>
 
           </div>
         </div>
@@ -189,8 +179,7 @@
                 in the monochromic space via training on large datasets, while implicitly propagates colors within
                 the single test image via internal learning. The colorization loss  is only calculated on the  unmasked regions.
               </p>
-            <img src="./method.jpg" class="img-responsive" alt="recolor" class="center"><br>
-              
+  
             
 
           </div>
