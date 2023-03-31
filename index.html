@@ -64,6 +64,47 @@
         <p> (* indicates joint first authors) </p>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+            <tr onmouseout="makeit3d_stop()" onmouseover="makeit3d_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+    
+              <div class="one">
+                <div class="two" id='makeit3d_image'><video  width=100% height=100% muted autoplay loop>
+                <source src="images/make_it_3d.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video></div>
+                <img src='images/make_it_3d.jpg' width="160">
+              </div>
+              
+              <script type="text/javascript">
+                function makeit3d_start() {
+                  document.getElementById('makeit3d_image').style.opacity = "1";
+                }
+
+                function makeit3d_stop() {
+                  document.getElementById('makeit3d_image').style.opacity = "0";
+                }
+                Rodin_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+                <papertitle> Make-It-3D: High-Fidelity 3D Creation from A Single Image with Diffusion Prior  </papertitle>
+              </a>
+              <br>
+              Junshu Tang, <strong>  Tengfei Wang </strong>,  Bo Zhang, Ting Zhang, Ran Yi, Lizhuang Ma, Dong Chen 
+              <br>
+              <em> preprint</em>, 2023  
+              <br>
+              <a href="https://arxiv.org/abs/2303.14184">arxiv</a> / 
+              <a href="https://github.com/junshutang/Make-It-3D">code</a> /  
+              <a href="https://make-it-3d.github.io/">project website</a> /  
+              <a href="https://make-it-3d.github.io/">video</a> /
+              <p></p>
+              <p style="color:red"> Generate 3D objects from a single image by distilling 3D knowledge from 2D diffusion model. 
+             </p>
+            </td>
+          </tr>  
+
+
             <tr onmouseout="Rodin_stop()" onmouseover="Rodin_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
     
