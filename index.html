@@ -149,7 +149,47 @@
         <p> (*equal contribution, †intern) </p>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+            <tr onmouseout="phidias_stop()" onmouseover="phidias_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+    
+              <div class="one">
+                <div class="two" id='phidias_image'><video  width=100% height=100% muted autoplay loop>
+                <source src="images/phidias.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video></div>
+                <img src='images/phidias.jpg' width="160">
+              </div>
+              
+              <script type="text/javascript">
+                function phidias_start() {
+                  document.getElementById('phidias_image').style.opacity = "1";
+                }
 
+                function phidias_stop() {
+                  document.getElementById('phidias_image').style.opacity = "0";
+                }
+                phidias_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+                <papertitle> Phidias: A Generative Model for Creating 3D Content from Text, Image, and 3D Conditions with Reference-Augmented Diffusion  </papertitle>
+           
+              <br>
+              Zhenwei Wang†*, <strong> Tengfei Wang* </strong>, Zexin He†, Gerhard Hancke, Ziwei Liu, Rynson W.H. Lau
+              <br>
+              <em> preprint </em>, 2024  
+              <br>
+              <a href="https://arxiv.org/abs/2409.11406">arxiv</a> / 
+              <a href="https://github.com/3DTopia/Phidias-Diffusion">code</a> /  
+              <a href="https://rag-3d.github.io/">project website</a> /  
+              <p></p>
+              <p style="color:#d22222"> A 3D diffusion model with RAG, supporting 3D generation from text, image, and existing 3D models.
+             </p>
+            </td>
+          </tr>  
+
+          
+         
             <tr onmouseout="lgm_stop()" onmouseover="lgm_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
     
