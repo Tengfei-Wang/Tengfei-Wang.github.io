@@ -229,7 +229,42 @@
           </tr>  
 
           
-         
+            <tr onmouseout="omni6d_stop()" onmouseover="omni6d_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='omni6d_image'>
+                  <img src='images/omni6d_after.jpg' width="160"></div>
+                <img src='images/omni6d_before.jpg' width="160">
+              </div>
+              <script type="text/javascript">
+                function omni6d_start() {
+                  document.getElementById('omni6d_image').style.opacity = "1";
+                }
+
+                function omni6d_stop() {
+                  document.getElementById('omni6d_image').style.opacity = "0";
+                }
+                omni6d_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <papertitle> Omni6D: Large-Vocabulary 3D Object Dataset for Category-Level 6D Object Pose Estimation   </papertitle>
+            
+              <br>
+              Mengchen Zhang†, Tong Wu, Tai Wang, <strong> Tengfei Wang </strong>, Ziwei Liu, Dahua Lin
+              <br>
+              <em> ECCV </em>, 2024   
+              <br>
+              <a href="https://arxiv.org/abs/2409.18261">arxiv</a> / 
+              <a href="https://github.com/3DTopia/Omni6D/">code</a> /  
+              <a href="https://www.youtube.com/watch?v=BKyw51bUhZs">video</a> / 
+              <a href="https://openxlab.org.cn/datasets/kszpxxzmcwww/Omni6D/">data</a> / 
+              <p></p>
+              <p style="color:#d22222"> A large and realistic dataset for 6D pose estimation.
+             </p>
+            </td>
+          </tr>      
+          
             <tr onmouseout="lgm_stop()" onmouseover="lgm_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
     
