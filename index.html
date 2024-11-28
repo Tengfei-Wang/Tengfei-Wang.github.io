@@ -188,6 +188,51 @@
         <p> (*equal contribution, ^intern, &dagger;corresponding author) </p>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+             <tr onmouseout="sar3d_stop()" onmouseover="sar3d_start()">
+            <td class="w3-hide-small" style="padding:20px;width:25%;vertical-align:middle">
+    
+              <div class="one">
+                <div class="two" id='sar3d_image'>
+                 <video  width=100% height=100% muted autoplay loop>
+                <source src="images/SAR3D.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+             </div>
+               <video  width=100% height=100% muted autoplay loop>
+                <source src="images/SAR3D.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+              </div>
+              
+              <script type="text/javascript">
+                function sar3d_start() {
+                  document.getElementById('sar3d_image').style.opacity = "1";
+                }
+
+                function sar3d_stop() {
+                  document.getElementById('sar3d_image').style.opacity = "0";
+                }
+                sar3d_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+                <papertitle> 	SAR3D: Autoregressive 3D Object Generation and Understanding via Multi-scale 3D VQVAE  </papertitle>
+           
+              <br>
+              Yongwei Chen, Yushi Lan, Shangchen Zhou, <strong> Tengfei Wang</strong>, Xingang Pan
+              <br>
+              <em> preprint </em>, 2024  
+              <br>
+              <a href="https://arxiv.org/abs/2411.16856">arxiv</a> / 
+              <a href="https://github.com/cyw-3d/SAR3D">code</a> /  
+              <a href="https://cyw-3d.github.io/projects/SAR3D/">project website</a> /  
+       
+              <p></p>
+              <p style="color:#d22222"> A 3D auto-regressive model for both 3D generation and understanding.
+             </p>
+            </td>
+          </tr>  
+          
            <tr onmouseout="matanything_stop()" onmouseover="matanything_start()">
             <td class="w3-hide-small" style="padding:20px;width:25%;vertical-align:middle">
     
