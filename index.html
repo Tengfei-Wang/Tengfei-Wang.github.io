@@ -188,6 +188,47 @@
         <p> (*equal contribution, ^intern, &dagger;corresponding author) </p>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+           <tr onmouseout="lightrig_stop()" onmouseover="lightrig_start()">
+            <td class="w3-hide-small" style="padding:20px;width:25%;vertical-align:middle">
+    
+              <div class="one">
+                <div class="two" id='lightrig_image'><video  width=100% height=100% muted autoplay loop>
+                <source src="images/lightrig.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video></div>
+                <img src='images/lightrig_before.jpg' width="100%">
+              </div>
+              
+              <script type="text/javascript">
+                function lightrig_start() {
+                  document.getElementById('lightrig_image').style.opacity = "1";
+                }
+
+                function lightrig_stop() {
+                  document.getElementById('lightrig_image').style.opacity = "0";
+                }
+                lightrig_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+                <papertitle> Neural LightRig: Unlocking Accurate Object Normal and Material Estimation with Multi-Light Diffusion  </papertitle>
+           
+              <br>
+              
+              Zexin He*^, <strong> Tengfei Wang* </strong>, Xin Huang^, Xingang Pan, Ziwei Liu
+              <br>
+              <em> preprint </em>, 2024  
+              <br>
+              <a href="https://arxiv.org/abs/2412.09593">arxiv</a> / 
+              <a href="https://github.com/ZexinHe/Neural-LightRig">code</a> /  
+              <a href="https://projects.zxhezexin.com/neural-lightrig/">project website</a> /  
+              <a href="https://projects.zxhezexin.com/neural-lightrig/">video</a> /  
+              <p></p>
+              <p style="color:#d22222"> Accurate single-image inverse rendering with multi-light diffusion as virtual light rigs.
+             </p>
+            </td>
+          </tr>  
+
              <tr onmouseout="sar3d_stop()" onmouseover="sar3d_start()">
             <td class="w3-hide-small" style="padding:20px;width:25%;vertical-align:middle">
     
