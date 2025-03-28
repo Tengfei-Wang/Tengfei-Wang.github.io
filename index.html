@@ -230,6 +230,43 @@
              </p>
             </td>
           </tr>  
+          
+           <tr onmouseout="bench3d_stop()" onmouseover="bench3d_start()">
+            <td class="w3-hide-small" style="padding:20px;width:25%;vertical-align:middle">
+    
+              <div class="one">
+                <div class="two" id='bench3d_image'>
+                  <img src='images/bench3d.png' width="160"></div>
+                <img src='images/bench3d.png' width="160">
+              </div>
+              
+              <script type="text/javascript">
+                function bench3d_start() {
+                  document.getElementById('bench3d_image').style.opacity = "1";
+                }
+
+                function bench3d_stop() {
+                  document.getElementById('bench3d_image').style.opacity = "0";
+                }
+                bench3d_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+                <papertitle> 3DGen-Bench: Comprehensive Benchmark Suite for 3D Generative Models  </papertitle>
+           
+              <br>
+              
+              Yuhan Zhang, Mengchen Zhang, Tong WU, <strong> Tengfei Wang* </strong>, Gordon Wetzstein, Dahua Lin, Ziwei Liu
+              <br>
+              <em> preprint </em>, 2025  
+              <br>
+              <a href="https://arxiv.org/pdf/2503.21745">arxiv</a> /   
+              <a href="hhttps://huggingface.co/spaces/ZhangYuhan/3DGen-Arena">Arena</a> / 
+              <p></p>
+              <p style="color:#d22222"> Evaluation models with human preference for text-to-3D and image-to-3D generative models.
+             </p>
+            </td>
+          </tr>  
 
              <tr onmouseout="sar3d_stop()" onmouseover="sar3d_start()">
             <td class="w3-hide-small" style="padding:20px;width:25%;vertical-align:middle">
