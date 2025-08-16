@@ -201,6 +201,51 @@
         <p> (*equal contribution, ^intern, &dagger;corresponding author) </p>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+             <tr onmouseout="voyager_stop()" onmouseover="voyager_start()">
+            <td class="w3-hide-small" style="padding:20px;width:25%;vertical-align:middle">
+    
+              <div class="one">
+                <div class="two" id='voyager_image'>
+                 <video  width=100% height=100% muted autoplay loop>
+                <source src="images/voyager.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+             </div>
+               <video  width=100% height=100% muted autoplay loop>
+                <source src="images/voyager.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+              </div>
+              
+              <script type="text/javascript">
+                function voyager_start() {
+                  document.getElementById('voyager_image').style.opacity = "1";
+                }
+
+                function voyager_stop() {
+                  document.getElementById('voyager_image').style.opacity = "0";
+                }
+               voyager_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+                <papertitle> 	Voyager: Long-Range and World-Consistent Video Diffusion for Explorable 3D Scene Generation  </papertitle>
+           
+              <br>
+              Tianyu Huang^, Guandong Zheng^, <strong> Tengfei Wang<sup>&dagger;</sup> </strong>, Yuhao Liu^, Zhenwei Wang^, Junta Wu, Jie Jiang, Hui Li, Wangmeng Zuo, Chunchao Guo
+              <br>
+              <em> CVPR </em>, 2025  
+              <br>
+              <a href="https://arxiv.org/abs/2411.16856">arxiv</a> / 
+              <a href="https://github.com/cyw-3d/SAR3D">code</a> /  
+              <a href="https://cyw-3d.github.io/projects/SAR3D/">project website</a> /  
+       
+              <p></p>
+              <p style="color:#d22222"> A 3D auto-regressive model for both 3D generation and understanding.
+             </p>
+            </td>
+          </tr>  
+          
            <tr onmouseout="lightrig_stop()" onmouseover="lightrig_start()">
             <td class="w3-hide-small" style="padding:20px;width:25%;vertical-align:middle">
     
