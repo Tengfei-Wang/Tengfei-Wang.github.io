@@ -201,6 +201,100 @@
         <p> (*equal contribution, ^intern, &dagger;corresponding author) </p>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+            <tr onmouseout="worldmirror_stop()" onmouseover="worldmirror_start()">
+            <td class="w3-hide-small" style="padding:20px;width:25%;vertical-align:middle">
+    
+              <div class="one">
+                <div class="two" id='worldmirror_image'>
+                 <video  width=100% height=100% muted autoplay loop>
+                <source src="images/WorldMirror.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+             </div>
+               <video  width=100% height=100% muted autoplay loop>
+                <source src="images/WorldMirror.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+              </div>
+              
+              <script type="text/javascript">
+                function worldmirror_start() {
+                  document.getElementById('worldmirror_image').style.opacity = "1";
+                }
+
+                function worldmirror_stop() {
+                  document.getElementById('worldmirror_image').style.opacity = "0";
+                }
+               worldmirror_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+                <papertitle> 	WorldMirror: Universal 3D World Reconstruction with Any-Prior Prompting  </papertitle>
+           
+              <br>
+              Yifan Liu*^, Zhiyuan Min*^, Zhenwei Wang*, Junta Wu, <strong> Tengfei Wang<sup>&dagger;</sup> </strong>, Yixuan Yuan, Yawei Luo, Chunchao Guo
+              <br>
+              <em> preprint </em>, 2025  
+              <br>
+              <a href="https://arxiv.org/abs/2510.10726">arxiv</a> / 
+              <a href="https://github.com/Tencent-Hunyuan/HunyuanWorld-Mirror">code</a> /  
+              <a href="https://3d-models.hunyuan.tencent.com/world/">project website</a> /  
+       
+              <p></p>
+              <p style="color:#d22222"> Universal and Feedforward 3D reconstruction model with any input and any output.
+             </p>
+            </td>
+          </tr>  
+
+
+
+            <tr onmouseout="flashworld_stop()" onmouseover="flashworldr_start()">
+            <td class="w3-hide-small" style="padding:20px;width:25%;vertical-align:middle">
+    
+              <div class="one">
+                <div class="two" id='flashworld_image'>
+                 <video  width=100% height=100% muted autoplay loop>
+                <source src="images/FlashWorld.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+             </div>
+               <video  width=100% height=100% muted autoplay loop>
+                <source src="images/FlashWorld.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+              </div>
+              
+              <script type="text/javascript">
+                function flashworld_start() {
+                  document.getElementById('flashworld_image').style.opacity = "1";
+                }
+
+                function flashworld_stop() {
+                  document.getElementById('flashworld_image').style.opacity = "0";
+                }
+               flashworld_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+                <papertitle> 	 FlashWorld: High-quality 3D Scene Generation within Seconds  </papertitle>
+           
+              <br>
+              Xinyang Li^,  <strong> Tengfei Wang<sup>&dagger;</sup> </strong>,  Zixiao Gu^, Shengchuan Zhang, Chunchao Guo,  Liujuan Cao
+              <br>
+              <em> preprint </em>, 2025  
+              <br>
+              <a href="https://arxiv.org/pdf/2510.13678">arxiv</a> / 
+              <a href="https://github.com/imlixinyang/FlashWorld">code</a> /  
+              <a href="https://imlixinyang.github.io/FlashWorld-Project-Page/">project website</a> /  
+              <a href="https://huggingface.co/spaces/imlixinyang/FlashWorld-Demo-Spark">online demo</a> /  
+       
+              <p></p>
+              <p style="color:#d22222"> Generating 3DGS scenes in 5 seconds on a single GPU.
+             </p>
+            </td>
+          </tr>  
+
+
              <tr onmouseout="voyager_stop()" onmouseover="voyager_start()">
             <td class="w3-hide-small" style="padding:20px;width:25%;vertical-align:middle">
     
@@ -232,13 +326,13 @@
                 <papertitle> 	Voyager: Long-Range and World-Consistent Video Diffusion for Explorable 3D Scene Generation  </papertitle>
            
               <br>
-              Tianyu Huang^, Guandong Zheng^, <strong> Tengfei Wang<sup>&dagger;</sup> </strong>, Yuhao Liu^, Zhenwei Wang^, Junta Wu, Jie Jiang, Hui Li, Wangmeng Zuo, Chunchao Guo
+              Tianyu Huang*^, Guandong Zhengwang*^, <strong> Tengfei Wang<sup>&dagger;</sup> </strong>, Yuhao Liu^, Zhenwei Wang^, Junta Wu, Jie Jiang, Hui Li, Wangmeng Zuo, Chunchao Guo
               <br>
               <em> ACM Transactions on Graphics (SIGGRAPH Asia Journal) </em>, 2025  
               <br>
               <a href="https://arxiv.org/abs/2506.04225">arxiv</a> / 
-              <a href="">code</a> /  
-              <a href="">project website</a> /  
+              <a href="https://github.com/Tencent-Hunyuan/HunyuanWorld-Voyager">code</a> /  
+              <a href="https://3d-models.hunyuan.tencent.com/world/">project website</a> /  
        
               <p></p>
               <p style="color:#d22222"> Joint RGB and Depth video generation for feedforward 3D scene extension.
