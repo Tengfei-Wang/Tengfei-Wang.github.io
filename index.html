@@ -201,6 +201,55 @@
         <p> (*equal contribution, ^intern, &dagger;corresponding author) </p>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+            <tr onmouseout="worldplay_stop()" onmouseover="worldplay_start()">
+            <td class="w3-hide-small" style="padding:20px;width:25%;vertical-align:middle">
+    
+              <div class="one">
+                <div class="two" id='worldplay_image'>
+                 <video  width=100% height=100% muted autoplay loop>
+                <source src="images/worldplay.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+             </div>
+               <video  width=100% height=100% muted autoplay loop>
+                <source src="images/worldplay.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+              </div>
+              
+              <script type="text/javascript">
+                function worldplay_start() {
+                  document.getElementById('worldplay_image').style.opacity = "1";
+                }
+
+                function worldplay_stop() {
+                  document.getElementById('worldplay_image').style.opacity = "0";
+                }
+               worldplay_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+                <papertitle> 	WorldPlay: Towards Long-Term Geometric Consistency for Real-Time Interactive World Modeling  </papertitle>
+           
+              <br>
+              Wenqiang Sun*^, Haiyu Zhang*^, Haoyuan Wang*, Junta Wu, Zehang Wang, Zhenwei Wang, Yunhong Wang, Jun Zhang, <strong> Tengfei Wang<sup>&dagger;</sup> </strong>,  Chunchao Guo
+              <br>
+              <em> preprint </em>, 2025  
+              <br>
+              <a href="https://arxiv.org/abs/2512.14614">arxiv</a> / 
+              <a href="https://github.com/Tencent-Hunyuan/HY-WorldPlay">code</a> /  
+              <a href="https://3d-models.hunyuan.tencent.com/world/">project website</a> /  
+              <a href="https://3d.hunyuan.tencent.com/sceneTo3D">online demo</a> /  
+       
+              <p></p>
+              <p style="color:#d22222"> Real-Time World Model with Long-Term Memory.
+             </p>
+            </td>
+          </tr>  
+
+
+
+
             <tr onmouseout="worldmirror_stop()" onmouseover="worldmirror_start()">
             <td class="w3-hide-small" style="padding:20px;width:25%;vertical-align:middle">
     
