@@ -192,7 +192,51 @@
             </td>
            </tr>  
 
-          
+  
+              <tr onmouseout="hyworld15_stop()" onmouseover="hyworld15_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='hyworld15_image'><video  width=100% height=100% muted autoplay loop>
+                <source src="images/hyworld1.5.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video></div>
+                
+               <video  width=100% height=100% muted autoplay loop>
+                <source src="images/hyworld1.5.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+              </div>
+              
+              <script type="text/javascript">
+                function hyworld15_start() {
+                  document.getElementById('hyworld15_image').style.opacity = "1";
+                }
+
+                function hyworld15_stop() {
+                  document.getElementById('hyworld15_image').style.opacity = "0";
+                }
+                hyworld15_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+                <papertitle>  HY-World 1.5: A Systematic Framework for Interactive World Modeling with Real-Time Latency and Geometric Consistency </papertitle>
+            
+              <br>
+              Project Lead
+              <br>
+             2025
+              <br>
+              <a href="https://3d-models.hunyuan.tencent.com/world/world1_5/HYWorld_1.5_Tech_Report.pdf">arxiv</a> /  
+              <a href="https://github.com/Tencent-Hunyuan/HY-WorldPlay">code</a> /  
+              <a href="https://3d.hunyuan.tencent.com/sceneTo3D">online demo</a> /  
+              <a href="https://3d-models.hunyuan.tencent.com/world/">project page & video</a> /  
+
+              <p></p>
+              <p style="color:#d22222"> The first Open-Source world model with real-time latency, long-term memory, interactive control, and long-horizon generation.
+             </p>
+            </td>
+           </tr>  
+
            </tbody></table>
 
   
