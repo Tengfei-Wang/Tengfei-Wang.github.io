@@ -292,6 +292,44 @@
           </tr>  
 
 
+         <tr onmouseout="moca_stop()" onmouseover="moca_start()">
+            <td class="w3-hide-small" style="padding:20px;width:25%;vertical-align:middle">
+    
+              <div class="one">
+                <div class="two" id='moca_image'><video  width=100% height=100% muted autoplay loop>
+                <source src="images/moca.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video></div>
+                <img src='images/moca.jpg' width="100%">
+              </div>
+              
+              <script type="text/javascript">
+                function moca_start() {
+                  document.getElementById('moca_image').style.opacity = "1";
+                }
+
+                function moca_stop() {
+                  document.getElementById('moca_image').style.opacity = "0";
+                }
+                moca_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+                <papertitle> MoCA: Mixture-of-Components Attention for Scalable Compositional 3D Generation  </papertitle>
+           
+              <br>
+              Zhiqi Li^, Wenhuan Li^, <strong> Tengfei Wang<sup>&dagger;</sup> </strong>, Zhenwei Wang, Junta Wu, Haoyuan Wang, Yunhan Yang, Zehuan Huang, Yang Li, Peidong Liu, Chunchao Guo
+              <br>
+              <em> preprint </em>, 2025  
+              <br>
+              <a href="https://arxiv.org/abs/2512.07628">arxiv</a> / 
+              <a href="https://github.com/lizhiqi49/MoCA">code</a> /  
+              <a href="https://lizhiqi49.github.io/MoCA/">project website</a> /  
+              <p></p>
+              <p style="color:#d22222"> Sparse attention for generating modular 3D assets and scenes.
+             </p>
+            </td>
+          </tr>  
 
 
             <tr onmouseout="worldmirror_stop()" onmouseover="worldmirror_start()">
