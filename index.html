@@ -19,7 +19,7 @@
               <p style="text-align:center">
                 <name>Tengfei WANG </name>  <br> <br>
               </p>
-              <p style="font-family:verdana"> I am currently a researcher at Tencent Hunyuan, leading a research team on world models. Previously, I was a researcher at Shanghai AI Lab, working closely with <a href="https://liuziwei7.github.io/"> Ziwei Liu </a>. I obtained my PhD degree at the Hong Kong University of Science and Technology (<a href="https://hkust.edu.hk/?cn=1">HKUST</a>), advised by <a href="https://cqf.io">Qifeng Chen</a>. 
+              <p style="font-family:verdana"> I am currently a researcher at Tencent Hunyuan, leading a research team on world models. I obtained my PhD degree at the Hong Kong University of Science and Technology (<a href="https://hkust.edu.hk/?cn=1">HKUST</a>), advised by <a href="https://cqf.io">Qifeng Chen</a>. 
                 I did research at Microsoft Research Asia (MSRA) from 2021 to 2023.
                 <br> I'm interested in AI-based visual content generation, including image, video and 
                 3D assets.  I've received HKUST CSE Best PhD Dissertation Award (Honorable Mention) in 2023.
@@ -245,6 +245,92 @@
         <heading>Publications</heading>
         <p> (*equal contribution, ^intern, &dagger;corresponding author) </p>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+            <tr onmouseout="ttc_stop()" onmouseover="ttc_start()">
+            <td class="w3-hide-small" style="padding:20px;width:25%;vertical-align:middle">
+    
+              <div class="one">
+                <div class="two" id='ttc_image'>
+                 <video  width=100% height=100% muted autoplay loop>
+                <source src="images/ttc.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+             </div>
+               <video  width=100% height=100% muted autoplay loop>
+                <source src="images/ttc.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+              </div>
+              
+              <script type="text/javascript">
+                function ttc_start() {
+                  document.getElementById('ttc_image').style.opacity = "1";
+                }
+
+                function ttc_stop() {
+                  document.getElementById('ttc_image').style.opacity = "0";
+                }
+               ttc_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+                <papertitle> 	Pathwise Test-Time Correction for Autoregressive Long Video Generation  </papertitle>
+           
+              <br>
+              Xunzhi Xiang*^, Zixuan Duan*, Guiyu Zhang, Haiyu Zhang, Zhe Gao, Junta Wu, Shaofeng Zhang,  <strong>Tengfei Wang </strong>, Qi Fan, Chunchao Guo 
+              <br>
+              <em> preprint </em>, 2025  
+              <br>
+              <a href="https://arxiv.org/abs/2602.05871">arxiv</a> / 
+              <a href="">code</a> /  
+              <a href="">project website</a> /  
+       
+              <p></p>
+              <p style="color:#d22222"> Fix accumulation error in long video generation without training.
+             </p>
+            </td>
+          </tr>  
+
+            <tr onmouseout="worldcompass_stop()" onmouseover="worldcompass_start()">
+            <td class="w3-hide-small" style="padding:20px;width:25%;vertical-align:middle">
+    
+              <div class="one">
+                <div class="two" id='worldcompass_image'>
+                <img src='images/worldcompass.jpg' width="100%">
+             </div>
+                <img src='images/worldcompass.jpg' width="100%">
+              </div>
+              
+              <script type="text/javascript">
+                function worldcompass_start() {
+                  document.getElementById('worldcompass_image').style.opacity = "1";
+                }
+
+                function worldcompass_stop() {
+                  document.getElementById('worldcompass_image').style.opacity = "0";
+                }
+               worldcompass_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <papertitle> 	WorldCompass: Reinforcement Learning for Long-Horizon World Models  </papertitle>
+           
+              <br>
+              Zehan Wang^, <strong> Tengfei Wang</strong>, Haiyu Zhang^, Xuhui Zuo, Junta Wu, Haoyuan Wang, Wenqiang Sun, Zhenwei Wang, Chenjie Cao, Hengshuang Zhao, Chunchao Guo, Zhou Zhao 
+              <br>
+              <em> preprint </em>, 2025  
+              <br>
+              <a href="https://arxiv.org/abs/2602.09022">arxiv</a> / 
+              <a href="https://github.com/Tencent-Hunyuan/HY-WorldPlay">code</a> /  
+              <a href="https://3d-models.hunyuan.tencent.com/world/">project website</a> /  
+              <a href="https://3d.hunyuan.tencent.com/sceneTo3D">online demo</a> /  
+       
+              <p></p>
+              <p style="color:#d22222"> RL done right for world models.
+             </p>
+            </td>
+          </tr>  
+
 
             <tr onmouseout="worldplay_stop()" onmouseover="worldplay_start()">
             <td class="w3-hide-small" style="padding:20px;width:25%;vertical-align:middle">
