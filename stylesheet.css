@@ -1,131 +1,608 @@
-/* latin-ext */
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAUi-qNiXg7eU0.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAXC-qNiXg7Q.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 700;
-  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_FQftx9897sxZ.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 700;
-  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_Gwftx9897g.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+/* ========================================================================
+   Tengfei Wang — Personal Academic Website
+   Tailwind CDN handles most utilities; this file defines design tokens,
+   the hover video thumbnail pattern (Tailwind can express it, but this
+   keeps paper cards tidy), and small custom elements.
+   ======================================================================== */
+
+:root {
+  /* Brand gradient endpoints */
+  --brand: #2563eb;
+  --brand-end: #7c3aed;
+  --brand-hover: #1d4ed8;
+  --brand-gradient: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  --accent-gold: #d49b00;
+  --accent-red: #dc2626;
+
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --border: #e2e8f0;
+  --border-subtle: #f1f5f9;
+  --text: #0f172a;
+  --text-muted: #64748b;
+  --text-soft: #475569;
+
+  /* Dot-grid for hero */
+  --dot-color: rgba(37, 99, 235, 0.08);
 }
 
-a {
-  color: #1772d0;
-  text-decoration: none;
+html.dark {
+  --brand: #60a5fa;
+  --brand-end: #a78bfa;
+  --brand-hover: #93c5fd;
+  --brand-gradient: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+  --accent-gold: #fbbf24;
+  --accent-red: #f87171;
+
+  --bg: #0d1117;
+  --surface: #161b22;
+  --border: #21262d;
+  --border-subtle: #161b22;
+  --text: #e6edf3;
+  --text-muted: #8b949e;
+  --text-soft: #c9d1d9;
+
+  --dot-color: rgba(96, 165, 250, 0.06);
 }
 
-a:focus,
-a:hover {
-  color: #f09228;
-  text-decoration: none;
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', 'Lato', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background-color .2s ease, color .2s ease;
 }
 
-body,
-td,
-th,
-tr,
-p,
-a {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px
-}
+a { color: var(--brand); text-decoration: none; transition: color .15s ease; }
+a:hover { color: var(--brand-hover); }
 
-strong {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
-}
-
-heading {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 22px;
-}
-
-papertitle {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
-  font-weight: 700
-}
-
-name {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 32px;
-}
-
-.one {
+/* ----- Hover thumbnail: static image → autoplay video on hover ---------- */
+.thumb {
+  position: relative;
   width: 160px;
   height: 160px;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #111;
+}
+/* Blurred backdrop: a scaled-up, blurred copy of the image fills the dead space.
+   Set via JS: thumb.style.setProperty('--thumb-src', 'url(...)') */
+.thumb::before {
+  content: '';
+  position: absolute;
+  inset: -20px;          /* extend beyond edges so blur doesn't show hard border */
+  background-image: var(--thumb-src);
+  background-size: cover;
+  background-position: center;
+  filter: blur(12px) brightness(0.6) saturate(1.2);
+  z-index: 0;
+}
+.thumb > img,
+.thumb > video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity .25s ease;
+  z-index: 1;            /* sit above the blurred backdrop */
+}
+/* Static images use contain so the full image is visible (blurred backdrop fills gaps).
+   Videos always cover — they are meant to fill the square. */
+.thumb > img   { object-fit: contain; }
+.thumb > video { object-fit: cover; }
+.thumb > video { opacity: 0; }
+
+/* Hover target is the whole card (article or .pcard), so that hovering on the
+   title / links / summary also triggers the thumbnail swap, not just the image.
+   The `article:has(.thumb)` selector matches any <article> that contains a
+   `.thumb` child; we then style descendants of that article. For `.pcard` we
+   add a parallel rule because some wrappers (Open Source, Publications) use
+   `.pcard` directly without an outer <article class> different enough. */
+
+/* Video swap: only fires when thumb actually wraps a playable <video source>. */
+article:has(.thumb > video > source):hover .thumb > video,
+.pcard:has(.thumb > video > source):hover   .thumb > video   { opacity: 1; }
+article:has(.thumb > video > source):hover .thumb > img,
+.pcard:has(.thumb > video > source):hover   .thumb > img     { opacity: 0; }
+
+/* img-to-img before/after swap (cards with two static images, no video). */
+.thumb > .thumb-after { opacity: 0; }
+article:has(.thumb > .thumb-after):hover .thumb > .thumb-after,
+.pcard:has(.thumb > .thumb-after):hover   .thumb > .thumb-after   { opacity: 1; }
+article:has(.thumb > .thumb-after):hover .thumb > .thumb-before,
+.pcard:has(.thumb > .thumb-after):hover   .thumb > .thumb-before  { opacity: 0; }
+
+/* Highlight card: bigger thumbnail */
+.thumb-lg {
+  width: 100%;
+  height: 180px;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+/* Zoom thumbnail image/video on card hover */
+article:has(.thumb-lg):hover .thumb-lg > img,
+article:has(.thumb-lg):hover .thumb-lg > video {
+  transform: scale(1.05);
+  transition: transform .4s ease, opacity .25s ease;
+}
+.thumb-lg > img,
+.thumb-lg > video {
+  transition: transform .4s ease, opacity .25s ease;
+}
+
+/* ----- Paper / project card ------------------------------------------- */
+.pcard {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid transparent;
+  border-radius: 1.25rem;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
   position: relative;
 }
+.pcard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 48px -12px rgba(37, 99, 235, 0.2);
+  border-left-color: var(--brand);
+  border-top-color: var(--border);
+  border-right-color: var(--border);
+  border-bottom-color: var(--border);
+}
 
-.two {
-  width: 160px;
-  height: 160px;
+@media (max-width: 640px) {
+  .pcard { flex-direction: column; }
+  .thumb { width: 100%; height: 200px; }
+}
+
+/* ----- Badges (Oral / Highlight / Award) ------------------------------ */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+.badge-oral      { background: rgba(210,34,34,.10);  color: var(--accent-red); }
+.badge-highlight { background: rgba(212,155,0,.14); color: var(--accent-gold); }
+.badge-award     { background: rgba(23,114,208,.12); color: var(--brand); }
+
+/* ----- Topic filter tabs --------------------------------------------- */
+.topic-tab {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--text-soft);
+  background: var(--surface);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .15s ease;
+}
+.topic-tab:hover { color: var(--brand); border-color: var(--brand); }
+.topic-tab.active {
+  background: var(--brand-gradient);
+  color: #fff;
+  border-color: transparent;
+}
+
+/* ----- Year divider -------------------------------------------------- */
+.year-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2.5rem 0 0.75rem;
+  font-size: 2.25rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: var(--text);
+  line-height: 1;
+}
+.year-divider::after {
+  content: "";
+  flex: 1;
+  height: 1.5px;
+  background: var(--border);
+  margin-top: 0.15em;
+}
+
+/* ----- Author strong highlight --------------------------------------- */
+.pauthors strong { color: var(--text); }
+
+/* ----- News animated reveal ----------------------------------------- */
+.news-item.hidden-extra { display: none; }
+
+/* ----- Section heading ---------------------------------------------- */
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.section-title::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 1.2em;
+  background: var(--brand-gradient);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.section-sub {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  margin-top: 0.3rem;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ----- Nav bar backdrop --------------------------------------------- */
+.nav-bar {
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 2px solid var(--border);
+}
+
+/* ----- Hero dot-grid background ------------------------------------- */
+.hero-section {
+  position: relative;
+}
+.hero-section::before {
+  content: '';
   position: absolute;
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
+  inset: 0;
+  background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 1.5rem;
+}
+.hero-section > * { position: relative; z-index: 1; }
+
+/* ----- Link pill (arxiv/code/etc) ----------------------------------- */
+.link-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 11px;
+  border-radius: 999px;
+  background: var(--border-subtle);
+  border: 1px solid var(--border);
+  color: var(--text-soft);
+  font-size: 11.5px;
+  font-weight: 600;
+  margin-right: 5px;
+  margin-top: 4px;
+  transition: all .15s ease;
+}
+.link-pill:hover {
+  color: #fff;
+  background: var(--brand-gradient);
+  border-color: transparent;
 }
 
-.fade {
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
+/* ----- GitHub star badge — shields.io two-tone pill ------------------ */
+.gh-star-btn {
+  display: inline-flex;
+  align-items: stretch;
+  border-radius: 4px;
+  overflow: hidden;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  vertical-align: middle;
+  margin-right: 6px;
+  margin-top: 4px;
+  transition: opacity .15s ease;
+}
+.gh-star-btn:hover { opacity: .85; }
+.gh-star-btn .star-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 7px;
+  background: #1e293b;
+  color: #fff;
+  transition: background .15s ease;
+}
+.gh-star-btn:hover .star-label { background: var(--brand-gradient); }
+.gh-star-btn .star-count {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  background: #4a90d9;
+  color: #fff;
+  min-width: 2.5em;
+  justify-content: center;
+}
+html.dark .gh-star-btn .star-count { background: #2563eb; }
+
+/* ----- Profile glow ------------------------------------------------- */
+.profile-photo {
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 4px rgba(37,99,235,0.18),
+    0 0 0 10px rgba(124,58,237,0.10),
+    0 0 0 20px rgba(37,99,235,0.04),
+    0 24px 70px -15px rgba(37, 99, 235, 0.55);
+  transition: box-shadow .3s ease;
+}
+.profile-photo:hover {
+  box-shadow:
+    0 0 0 4px rgba(37,99,235,0.28),
+    0 0 0 12px rgba(124,58,237,0.15),
+    0 0 0 24px rgba(37,99,235,0.06),
+    0 28px 80px -15px rgba(37, 99, 235, 0.65);
 }
 
-span.highlight {
-  background-color: #ffffd0;
+/* ----- Inter font (Google Fonts) ------------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* ----- Video-only thumbnail (no static poster available) ------------ */
+.thumb.video-only {
+  background: linear-gradient(135deg, #1772d0 0%, #6366f1 50%, #8b5cf6 100%);
 }
+.thumb.video-only > video {
+  opacity: 1;                 /* always visible — don't wait for hover */
+}
+html.dark .thumb.video-only {
+  background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 50%, #a855f7 100%);
+}
+
+/* ----- Placeholder thumbnail (media missing) ----------------------- */
+.thumb.placeholder {
+  background: linear-gradient(135deg, #334155 0%, #475569 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+html.dark .thumb.placeholder {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+}
+
+/* ----- Publication list spacing ------------------------------------- */
+#publications .space-y-4 > * + * { margin-top: 1rem; }
+
+/* ----- Paper title bigger & bolder --------------------------------- */
+.pcard h3.font-bold { font-size: 1rem; font-weight: 700; line-height: 1.4; }
+
+/* ----- News list: gradient dot + mono date ------------------------- */
+.news-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding: 0.35rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.news-item:last-of-type { border-bottom: none; }
+.news-item::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--brand-gradient);
+  flex-shrink: 0;
+  margin-top: 0.35em;
+}
+.news-date {
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--brand);
+  flex-shrink: 0;
+}
+
+/* ── ⑤ Paper takeaway text: deep blue instead of red -------------- */
+.paper-takeaway { color: var(--brand) !important; opacity: 0.9; font-style: italic; }
+
+/* ----- Social buttons: outline → gradient fill on hover ------------ */
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  color: var(--text-soft);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+.social-btn:hover {
+  border-color: transparent;
+  background: var(--brand-gradient);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px -6px rgba(37,99,235,0.4);
+}
+.social-btn svg { flex-shrink: 0; transition: transform .2s ease; }
+.social-btn:hover svg { transform: scale(1.1); }
+
+/* ----- Nav link hover underline animation --------------------------- */
+.nav-link {
+  position: relative;
+  padding-bottom: 2px;
+  color: var(--text-soft);
+  font-weight: 500;
+  transition: color .15s ease;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  right: 50%;
+  height: 2px;
+  background: var(--brand-gradient);
+  border-radius: 1px;
+  transition: left .2s ease, right .2s ease;
+}
+.nav-link:hover { color: var(--text); }
+.nav-link:hover::after { left: 0; right: 0; }
+
+/* ----- Badge: left accent bar style (Oral/Highlight) --------------- */
+.badge-oral {
+  background: transparent;
+  color: var(--accent-red);
+  border-left: 2.5px solid var(--accent-red);
+  border-radius: 0 4px 4px 0;
+  padding: 1px 7px 1px 6px;
+}
+.badge-highlight {
+  background: transparent;
+  color: var(--accent-gold);
+  border-left: 2.5px solid var(--accent-gold);
+  border-radius: 0 4px 4px 0;
+  padding: 1px 7px 1px 6px;
+}
+.badge-award {
+  background: rgba(37,99,235,0.08);
+  color: var(--brand);
+  border-left: 2.5px solid var(--brand);
+  border-radius: 0 4px 4px 0;
+  padding: 1px 7px 1px 6px;
+}
+
+/* ----- Footer upgraded ─────────────────────────────────────────── */
+.footer-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem 0 1.5rem;
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+}
+.footer-copy {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.footer-links a {
+  color: var(--text-muted);
+  transition: color .15s ease;
+}
+.footer-links a:hover { color: var(--brand); }
+
+/* ----- Scroll reveal animation ------------------------------------- */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.reveal.visible {
+  animation: fadeInUp .5s ease forwards;
+}
+
+/* ----- Pinned / featured paper card -------------------------------- */
+.pinned-card {
+  position: relative;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.pinned-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px -15px rgba(37,99,235,0.25);
+}
+.pinned-thumb {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  background: #0d1117;
+}
+.pinned-thumb > video {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+  transition: opacity .3s ease, transform .5s ease;
+}
+.pinned-card:hover .pinned-thumb > video {
+  opacity: 1;
+  transform: scale(1.04);
+}
+/* Gradient overlay so text is readable over video */
+.pinned-thumb::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%);
+  pointer-events: none;
+}
+.pinned-body { padding: 1.1rem; }
+.pinned-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--text);
+  margin-top: 0.5rem;
+}
+.pinned-meta {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  margin-top: 0.35rem;
+}
+
+/* ----- Bio blocks (research / background / achievements) ----------- */
+.bio-block {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+.bio-icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(37,99,235,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  margin-top: 0.1em;
+}
+html.dark .bio-icon { background: rgba(96,165,250,0.12); }
+.bio-text {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--text-soft);
+}
+.bio-text strong { color: var(--text); font-weight: 600; }
+.bio-text a { color: var(--brand); }
