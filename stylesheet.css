@@ -257,6 +257,8 @@ article:has(.thumb-lg):hover .thumb-lg > video {
 /* ----- Hero dot-grid background ------------------------------------- */
 .hero-section {
   position: relative;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 3rem !important;
 }
 .hero-section::before {
   content: '';
@@ -782,3 +784,82 @@ html.dark .bio-icon { background: rgba(96,165,250,0.12); }
   font-size: 11.5px;
   color: var(--text-muted);
 }
+
+/* ----- Research Focus / World Models Banner ----------------------- */
+.wm-banner {
+  background: var(--ink, #0f0f0f);
+  color: #fff;
+  padding: 3.5rem 0;
+  margin: 0 0 3rem 0;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+.wm-banner-inner {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 5vw, 4rem);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+.wm-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 0.75rem;
+}
+.wm-heading {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: #fff;
+}
+.wm-desc {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.6);
+  max-width: 420px;
+}
+.wm-links-row {
+  margin-top: 1.25rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.wm-links-row a {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+  padding-bottom: 1px;
+  transition: color .15s, border-color .15s;
+}
+.wm-links-row a:hover {
+  color: #fff;
+  border-color: #fff;
+  text-decoration: none;
+}
+.wm-video-wrap {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+.wm-video-wrap video {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+@media (max-width: 768px) {
+  .wm-banner-inner { grid-template-columns: 1fr; }
+  .wm-video-wrap { display: none; }
+}
+html.dark .wm-banner { background: #000; }
