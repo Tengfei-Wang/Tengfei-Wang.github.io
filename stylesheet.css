@@ -6,14 +6,12 @@
    ======================================================================== */
 
 :root {
-  /* Brand gradient endpoints */
-  --brand: #2563eb;
-  --brand-end: #7c3aed;
-  --brand-hover: #1d4ed8;
-  --brand-gradient: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  --brand: #1e40af;
+  --brand-end: #1e40af;
+  --brand-hover: #1e3a8a;
+  --brand-gradient: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
   --accent-gold: #d49b00;
   --accent-red: #dc2626;
-
   --bg: #f8fafc;
   --surface: #ffffff;
   --border: #e2e8f0;
@@ -21,19 +19,16 @@
   --text: #0f172a;
   --text-muted: #64748b;
   --text-soft: #475569;
-
-  /* Dot-grid for hero */
-  --dot-color: rgba(37, 99, 235, 0.08);
+  --dot-color: rgba(30,64,175,0.06);
 }
 
 html.dark {
-  --brand: #60a5fa;
-  --brand-end: #a78bfa;
-  --brand-hover: #93c5fd;
-  --brand-gradient: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+  --brand: #93c5fd;
+  --brand-end: #a5b4fc;
+  --brand-hover: #bfdbfe;
+  --brand-gradient: linear-gradient(135deg, #93c5fd 0%, #a5b4fc 100%);
   --accent-gold: #fbbf24;
   --accent-red: #f87171;
-
   --bg: #0d1117;
   --surface: #161b22;
   --border: #21262d;
@@ -41,8 +36,7 @@ html.dark {
   --text: #e6edf3;
   --text-muted: #8b949e;
   --text-soft: #c9d1d9;
-
-  --dot-color: rgba(96, 165, 250, 0.06);
+  --dot-color: rgba(147,197,253,0.06);
 }
 
 html { scroll-behavior: smooth; }
@@ -146,7 +140,7 @@ article:has(.thumb-lg):hover .thumb-lg > video {
 }
 .pcard:hover {
   transform: translateY(-3px);
-  box-shadow: 0 16px 48px -12px rgba(37, 99, 235, 0.2);
+  box-shadow: 0 16px 48px -12px rgba(30, 64, 175, 0.2);
   border-left-color: var(--brand);
   border-top-color: var(--border);
   border-right-color: var(--border);
@@ -338,18 +332,18 @@ html.dark .gh-star-btn .star-count { background: #2563eb; }
 .profile-photo {
   border-radius: 50%;
   box-shadow:
-    0 0 0 4px rgba(37,99,235,0.18),
-    0 0 0 10px rgba(124,58,237,0.10),
-    0 0 0 20px rgba(37,99,235,0.04),
-    0 24px 70px -15px rgba(37, 99, 235, 0.55);
+    0 0 0 4px rgba(30,64,175,0.18),
+    0 0 0 10px rgba(30,64,175,0.09),
+    0 0 0 20px rgba(30,64,175,0.04),
+    0 24px 70px -15px rgba(30, 64, 175, 0.50);
   transition: box-shadow .3s ease;
 }
 .profile-photo:hover {
   box-shadow:
-    0 0 0 4px rgba(37,99,235,0.28),
-    0 0 0 12px rgba(124,58,237,0.15),
-    0 0 0 24px rgba(37,99,235,0.06),
-    0 28px 80px -15px rgba(37, 99, 235, 0.65);
+    0 0 0 4px rgba(30,64,175,0.28),
+    0 0 0 12px rgba(30,64,175,0.13),
+    0 0 0 24px rgba(30,64,175,0.06),
+    0 28px 80px -15px rgba(30, 64, 175, 0.60);
 }
 
 /* ----- Inter font (Google Fonts) ------------------------------------ */
@@ -439,7 +433,7 @@ html.dark .thumb.placeholder {
   background: var(--brand-gradient);
   color: #fff;
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px -6px rgba(37,99,235,0.4);
+  box-shadow: 0 6px 20px -6px rgba(30,64,175,0.4);
 }
 .social-btn svg { flex-shrink: 0; transition: transform .2s ease; }
 .social-btn:hover svg { transform: scale(1.1); }
@@ -517,15 +511,15 @@ html.dark .thumb.placeholder {
 
 /* ----- Scroll reveal animation ------------------------------------- */
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
+  from { opacity: 0; transform: translateY(6px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 .reveal {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(6px);
 }
 .reveal.visible {
-  animation: fadeInUp .5s ease forwards;
+  animation: fadeInUp .25s ease forwards;
 }
 
 /* ----- Pinned / featured paper card -------------------------------- */
@@ -606,3 +600,185 @@ html.dark .bio-icon { background: rgba(96,165,250,0.12); }
 }
 .bio-text strong { color: var(--text); font-weight: 600; }
 .bio-text a { color: var(--brand); }
+
+/* ----- Back to top button ------------------------------------------ */
+#back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--surface) 75%, transparent);
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  border: 1px solid var(--border);
+  color: var(--brand);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08), 0 0 0 0 rgba(37,99,235,0);
+  opacity: 0;
+  transform: translateY(12px) scale(0.9);
+  transition: opacity .3s ease, transform .3s cubic-bezier(.34,1.56,.64,1),
+              box-shadow .2s ease, border-color .2s ease, color .2s ease;
+  pointer-events: none;
+  z-index: 100;
+}
+#back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+#back-to-top:hover {
+  border-color: var(--brand);
+  color: #fff;
+  background: var(--brand-gradient);
+  box-shadow: 0 6px 24px -6px rgba(37,99,235,0.45);
+  transform: translateY(-3px) scale(1);
+}
+#back-to-top:active {
+  transform: translateY(0) scale(0.95);
+}
+
+/* ----- Reading progress bar ---------------------------------------- */
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 2.5px;
+  background: var(--brand-gradient);
+  z-index: 200;
+  transition: width .1s linear;
+  border-radius: 0 2px 2px 0;
+}
+
+/* ----- Nav active section highlight --------------------------------- */
+.nav-link.nav-active {
+  color: var(--brand);
+}
+.nav-link.nav-active::after {
+  left: 0;
+  right: 0;
+}
+
+/* ----- BibTeX modal ------------------------------------------------- */
+.cite-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 11px;
+  border-radius: 999px;
+  background: var(--border-subtle);
+  border: 1px solid var(--border);
+  color: var(--text-soft);
+  font-size: 11.5px;
+  font-weight: 600;
+  margin-right: 5px;
+  margin-top: 4px;
+  cursor: pointer;
+  transition: all .15s ease;
+}
+.cite-btn:hover {
+  color: #fff;
+  background: var(--brand-gradient);
+  border-color: transparent;
+}
+
+.bib-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(4px);
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease;
+}
+.bib-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.bib-modal {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  width: min(640px, 90vw);
+  box-shadow: 0 24px 64px -16px rgba(0,0,0,0.35);
+  transform: translateY(12px) scale(0.97);
+  transition: transform .2s cubic-bezier(.34,1.56,.64,1);
+}
+.bib-overlay.open .bib-modal {
+  transform: translateY(0) scale(1);
+}
+.bib-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.bib-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.bib-close {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+  transition: all .15s ease;
+}
+.bib-close:hover { background: var(--border); color: var(--text); }
+.bib-code {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--text-soft);
+  white-space: pre;
+  overflow-x: auto;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.bib-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.bib-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: 8px;
+  background: var(--brand-gradient);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: opacity .15s ease;
+}
+.bib-copy-btn:hover { opacity: 0.85; }
+.bib-copy-btn.copied {
+  background: linear-gradient(135deg, #059669, #10b981);
+}
+.bib-hint {
+  font-size: 11.5px;
+  color: var(--text-muted);
+}

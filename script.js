@@ -159,15 +159,93 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0, rootMargin: '0px 0px 100px 0px' });
 
   // Stagger pcards within each year group
   let cardIndex = 0;
   document.querySelectorAll('.reveal').forEach(el => {
     if (el.classList.contains('pcard')) {
-      el.style.animationDelay = `${(cardIndex % 6) * 60}ms`;
+      el.style.animationDelay = '0ms';
       cardIndex++;
     }
     revealObserver.observe(el);
+  });
+
+  // ---------- Back to top button -----------------------------------
+  const backBtn = document.getElementById('back-to-top');
+  if (backBtn) {
+    window.addEventListener('scroll', () => {
+      backBtn.classList.toggle('visible', window.scrollY > 400);
+    }, { passive: true });
+    backBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // ---------- Reading progress bar ---------------------------------
+  const progressBar = document.getElementById('progress-bar');
+  if (progressBar) {
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      progressBar.style.width = docHeight > 0 ? `${(scrollTop / docHeight) * 100}%` : '0%';
+    }, { passive: true });
+  }
+
+  // ---------- Nav active section highlight -------------------------
+  const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+  const sections = [...navLinks].map(l => document.querySelector(l.getAttribute('href'))).filter(Boolean);
+
+  const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('nav-active'));
+        const active = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('nav-active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px', threshold: 0 });
+
+  sections.forEach(s => navObserver.observe(s));
+
+  // ---------- BibTeX modal -----------------------------------------
+  const bibOverlay  = document.getElementById('bib-overlay');
+  const bibCode     = document.getElementById('bib-code');
+  const bibClose    = document.getElementById('bib-close');
+  const bibCopyBtn  = document.getElementById('bib-copy-btn');
+
+  function openBib(bibtex) {
+    bibCode.textContent = bibtex;
+    bibOverlay.classList.add('open');
+    // reset copy button
+    bibCopyBtn.classList.remove('copied');
+    bibCopyBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy BibTeX';
+  }
+
+  function closeBib() { bibOverlay.classList.remove('open'); }
+
+  if (bibClose)  bibClose.addEventListener('click', closeBib);
+  if (bibOverlay) bibOverlay.addEventListener('click', e => { if (e.target === bibOverlay) closeBib(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeBib(); });
+
+  if (bibCopyBtn) {
+    bibCopyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(bibCode.textContent).then(() => {
+        bibCopyBtn.classList.add('copied');
+        bibCopyBtn.innerHTML = '✓ Copied!';
+        setTimeout(() => {
+          bibCopyBtn.classList.remove('copied');
+          bibCopyBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy BibTeX';
+        }, 2000);
+      });
+    });
+  }
+
+  // Wire up all cite buttons
+  document.querySelectorAll('.cite-btn[data-bibtex]').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      openBib(btn.dataset.bibtex);
+    });
   });
 });

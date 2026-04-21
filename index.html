@@ -25,6 +25,8 @@
   </script>
 </head>
 <body class="antialiased">
+<div id="progress-bar"></div>
+<div class="bib-overlay" id="bib-overlay"><div class="bib-modal"><div class="bib-header"><span class="bib-title">BibTeX Citation</span><button class="bib-close" id="bib-close">×</button></div><pre class="bib-code" id="bib-code"></pre><div class="bib-footer"><span class="bib-hint">Click to copy, then paste in your .bib file</span><button class="bib-copy-btn" id="bib-copy-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy BibTeX</button></div></div></div>
 
 <!-- =========================  NAV  ============================= -->
 <nav class="nav-bar sticky top-0 z-50">
@@ -51,10 +53,10 @@
       Tengfei Wang
     </h1>
     <p class="mt-4 pl-4 text-lg font-medium" style="color:var(--text-soft); border-left: 3px solid; border-image: var(--brand-gradient) 1;">
-      Researcher at <span class="font-bold" style="color:var(--text)">Tencent Hunyuan</span> · Leading the World Models Team
+      Researcher at <span class="font-bold" style="color:var(--text)">Tencent</span> · Leading the World Models Team
     </p>
     <div class="mt-5 space-y-3 max-w-2xl" style="color:var(--text-soft)">
-      <p class="leading-relaxed">I focus on <strong style="color:var(--text)">AI-driven multi-modal content generation</strong> — images, videos, and 3D assets. I lead the <strong style="color:var(--text)">HY World</strong> model series at Tencent Hunyuan and drive its productization and industry applications.</p>
+      <p class="leading-relaxed">I focus on <strong style="color:var(--text)">AI-driven multi-modal content generation</strong> — images, videos, and 3D assets. I lead the research of <strong style="color:var(--text)">HY World</strong> model series at Tencent Hunyuan and drive its productization and industry applications.</p>
       <p class="leading-relaxed">PhD from <a href="https://hkust.edu.hk/?cn=1">HKUST</a>, advised by <a href="https://cqf.io">Qifeng Chen</a>. Researcher at Microsoft Research Asia (2021–2023). Recipient of the HKUST Best PhD Dissertation Award (Honorable Mention).</p>
       <p class="leading-relaxed">Served as coach for the <a href="https://cse.hkust.edu.hk/acm/">HKUST ACM</a> competitive programming team (2019–2023), guiding the team to multiple gold medals.</p>
     </div>
@@ -224,6 +226,8 @@
           <a class="link-pill" href="https://github.com/Tencent-Hunyuan/HY-World-2.0">code</a>
           <a class="link-pill" href="https://3d.hunyuan.tencent.com/sceneTo3D">demo</a>
           <a class="link-pill" href="https://3d-models.hunyuan.tencent.com/world/">project</a>
+        
+          <button class="cite-btn" data-bibtex="@techreport{hyworld2_2026,\n  title   = {HY-World 2.0: A Multi-Modal World Model for Reconstructing, Generating, and Simulating 3D Worlds},\n  author  = {Tencent HY World Team},\n  year    = {2026},\n  url     = {https://arxiv.org/abs/2604.14268}\n}">Cite</button>
         </div>
         <p class="text-sm mt-2 paper-takeaway" style="color:var(--accent-red)">Transforms text, images, or video into navigable 3D worlds with meshes and Gaussian Splatting.</p>
       </div>
@@ -241,6 +245,8 @@
         <p class="text-sm mt-1"><em>preprint</em>, 2026</p>
         <div class="mt-2">
           <a class="link-pill" href="https://arxiv.org/abs/2602.05871">arXiv</a>
+        
+          <button class="cite-btn" data-bibtex="@article{xiang2026pathwise,\n  title   = {Pathwise Test-Time Correction for Autoregressive Long Video Generation},\n  author  = {Xiang, Xunzhi and Duan, Zixuan and Zhang, Guiyu and Zhang, Haiyu and Gao, Zhe and Wu, Junta and Zhang, Shaofeng and Wang, Tengfei and Fan, Qi and Guo, Chunchao},\n  journal = {arXiv preprint arXiv:2602.05871},\n  year    = {2026}\n}">Cite</button>
         </div>
         <p class="text-sm mt-2 paper-takeaway" style="color:var(--accent-red)">Fix accumulation error in long video generation without training.</p>
       </div>
@@ -261,6 +267,8 @@
           <a class="link-pill" href="https://github.com/Tencent-Hunyuan/HY-WorldPlay">code</a>
           <a class="link-pill" href="https://3d-models.hunyuan.tencent.com/world/">project</a>
           <a class="link-pill" href="https://3d.hunyuan.tencent.com/sceneTo3D">demo</a>
+        
+          <button class="cite-btn" data-bibtex="@article{wang2026worldcompass,\n  title   = {WorldCompass: Reinforcement Learning for Long-Horizon World Models},\n  author  = {Wang, Zehan and Wang, Tengfei and Zhang, Haiyu and Zuo, Xuhui and Wu, Junta and Wang, Haoyuan and Sun, Wenqiang and Wang, Zhenwei and Cao, Chenjie and Zhao, Hengshuang and Guo, Chunchao and Zhao, Zhou},\n  journal = {arXiv preprint arXiv:2602.09022},\n  year    = {2026}\n}">Cite</button>
         </div>
         <p class="text-sm mt-2 paper-takeaway" style="color:var(--accent-red)">RL done right for world models.</p>
       </div>
@@ -283,6 +291,8 @@
           <a class="link-pill" href="https://github.com/imlixinyang/FlashWorld">code</a>
           <a class="link-pill" href="https://imlixinyang.github.io/FlashWorld-Project-Page/">project</a>
           <a class="link-pill" href="https://huggingface.co/spaces/imlixinyang/FlashWorld-Demo-Spark">demo</a>
+        
+          <button class="cite-btn" data-bibtex="@inproceedings{li2026flashworld,\n  title     = {FlashWorld: High-quality 3D Scene Generation within Seconds},\n  author    = {Li, Xinyang and Wang, Tengfei and Gu, Zixiao and Zhang, Shengchuan and Guo, Chunchao and Cao, Liujuan},\n  booktitle = {ICLR},\n  year      = {2026}\n}">Cite</button>
         </div>
         <p class="text-sm mt-2 paper-takeaway" style="color:var(--accent-red)">Generating 3DGS scenes in 5 seconds on a single GPU.</p>
       </div>
@@ -307,6 +317,8 @@
           <a class="link-pill" href="https://github.com/Tencent-Hunyuan/HY-WorldPlay">code</a>
           <a class="link-pill" href="https://3d-models.hunyuan.tencent.com/world/">project</a>
           <a class="link-pill" href="https://3d.hunyuan.tencent.com/sceneTo3D">demo</a>
+        
+          <button class="cite-btn" data-bibtex="@techreport{hyworld15_2025,\n  title   = {HY-World 1.5: A Systematic Framework for Interactive World Modeling with Real-Time Latency and Geometric Consistency},\n  author  = {Tencent HY World Team},\n  year    = {2025}\n}">Cite</button>
         </div>
         <p class="text-sm mt-2 paper-takeaway" style="color:var(--accent-red)">Real-time world model with long-term memory and interactive control.</p>
       </div>
@@ -328,6 +340,8 @@
           <a class="link-pill" href="https://github.com/Tencent-Hunyuan/HY-WorldPlay">code</a>
           <a class="link-pill" href="https://3d-models.hunyuan.tencent.com/world/">project</a>
           <a class="link-pill" href="https://3d.hunyuan.tencent.com/sceneTo3D">demo</a>
+        
+          <button class="cite-btn" data-bibtex="@article{sun2025worldplay,\n  title   = {WorldPlay: Towards Long-Term Geometric Consistency for Real-Time Interactive World Modeling},\n  author  = {Sun, Wenqiang and Zhang, Haiyu and Wang, Haoyuan and Wu, Junta and Wang, Zehang and Wang, Zhenwei and Wang, Yunhong and Zhang, Jun and Wang, Tengfei and Guo, Chunchao},\n  journal = {arXiv preprint arXiv:2512.14614},\n  year    = {2025}\n}">Cite</button>
         </div>
         <p class="text-sm mt-2 paper-takeaway" style="color:var(--accent-red)">Real-time world model with long-term memory.</p>
       </div>
@@ -348,6 +362,8 @@
           <a class="link-pill" href="https://arxiv.org/abs/2512.07628">arXiv</a>
           <a class="link-pill" href="https://github.com/lizhiqi49/MoCA">code</a>
           <a class="link-pill" href="https://lizhiqi49.github.io/MoCA/">project</a>
+        
+          <button class="cite-btn" data-bibtex="@article{li2025moca,\n  title   = {MoCA: Mixture-of-Components Attention for Scalable Compositional 3D Generation},\n  author  = {Li, Zhiqi and Li, Wenhuan and Wang, Tengfei and Wang, Zhenwei and Wu, Junta and Wang, Haoyuan and Yang, Yunhan and Huang, Zehuan and Li, Yang and Liu, Peidong and Guo, Chunchao},\n  journal = {arXiv preprint arXiv:2512.07628},\n  year    = {2025}\n}">Cite</button>
         </div>
         <p class="text-sm mt-2 paper-takeaway" style="color:var(--accent-red)">Sparse attention for generating modular 3D assets and scenes.</p>
       </div>
@@ -368,6 +384,8 @@
           <a class="link-pill" href="https://github.com/Tencent-Hunyuan/HunyuanWorld-Mirror">code</a>
           <a class="link-pill" href="https://3d-models.hunyuan.tencent.com/world/">project</a>
           <a class="link-pill" href="https://huggingface.co/spaces/tencent/HunyuanWorld-Mirror">demo</a>
+        
+          <button class="cite-btn" data-bibtex="@article{liu2025worldmirror,\n  title   = {WorldMirror: Universal 3D World Reconstruction with Any-Prior Prompting},\n  author  = {Liu, Yifan and Min, Zhiyuan and Wang, Zhenwei and Wu, Junta and Wang, Tengfei and Yuan, Yixuan and Luo, Yawei and Guo, Chunchao},\n  journal = {arXiv preprint arXiv:2510.10726},\n  year    = {2025}\n}">Cite</button>
         </div>
         <p class="text-sm mt-2 paper-takeaway" style="color:var(--accent-red)">Universal and feedforward 3D reconstruction with any input and any output.</p>
       </div>
@@ -389,6 +407,8 @@
           <a class="link-pill" href="https://github.com/Tencent-Hunyuan/HunyuanWorld-1.0">code</a>
           <a class="link-pill" href="https://3d-models.hunyuan.tencent.com/world/">project</a>
           <a class="link-pill" href="https://3d.hunyuan.tencent.com/sceneTo3D">demo</a>
+        
+          <button class="cite-btn" data-bibtex="@techreport{hunyuanworld_2025,\n  title   = {HunyuanWorld 1.0: Generating Immersive, Explorable, and Interactive 3D Worlds from Words or Pixels},\n  author  = {Tencent HY World Team},\n  year    = {2025},\n  url     = {https://arxiv.org/abs/2507.21809}\n}">Cite</button>
         </div>
         <p class="text-sm mt-2 paper-takeaway" style="color:var(--accent-red)">Immersive and editable 3D scene generation from images or texts.</p>
       </div>
@@ -409,6 +429,8 @@
           <a class="link-pill" href="https://arxiv.org/abs/2506.04225">arXiv</a>
           <a class="link-pill" href="https://github.com/Tencent-Hunyuan/HunyuanWorld-Voyager">code</a>
           <a class="link-pill" href="https://3d-models.hunyuan.tencent.com/world/">project</a>
+        
+          <button class="cite-btn" data-bibtex="@article{huang2025voyager,\n  title   = {Voyager: Long-Range and World-Consistent Video Diffusion for Explorable 3D Scene Generation},\n  author  = {Huang, Tianyu and Zhengwang, Guandong and Wang, Tengfei and Liu, Yuhao and Wang, Zhenwei and Wu, Junta and Jiang, Jie and Li, Hui and Zuo, Wangmeng and Guo, Chunchao},\n  journal = {ACM Transactions on Graphics (SIGGRAPH Asia)},\n  year    = {2025}\n}">Cite</button>
         </div>
         <p class="text-sm mt-2 paper-takeaway" style="color:var(--accent-red)">Joint RGB and depth video generation based on camera control.</p>
       </div>
@@ -429,28 +451,14 @@
           <a class="link-pill" href="https://arxiv.org/abs/2506.22432">arXiv</a>
           <a class="link-pill" href="https://github.com/yuhaoliu7456/Shape-for-Motion">code</a>
           <a class="link-pill" href="https://shapeformotion.github.io/">project</a>
+        
+          <button class="cite-btn" data-bibtex="@inproceedings{liu2025shapeformotion,\n  title     = {Shape-for-Motion: Precise and Consistent Video Editing with 3D Proxy},\n  author    = {Liu, Yuhao and Wang, Tengfei and Liu, Fang and Wang, Zhenwei and Lau, Rynson},\n  booktitle = {ACM SIGGRAPH Asia},\n  year      = {2025}\n}">Cite</button>
         </div>
         <p class="text-sm mt-2 paper-takeaway" style="color:var(--accent-red)">Accurate video editing with 3D proxy and diffusion rendering.</p>
       </div>
     </article>
 
-    <article class="pcard reveal" data-topics="3d">
-      <div class="thumb">
-        <img src="images/bench3d.png" alt="3DGen-Bench">
-      </div>
-      <div class="flex-1 min-w-0">
-        <h3 class="font-bold leading-snug">3DGen-Bench: Comprehensive Benchmark Suite for 3D Generative Models</h3>
-        <p class="pauthors text-sm mt-1" style="color:var(--text-muted)">
-          Yuhan Zhang^, Mengchen Zhang^, Tong Wu, <strong>Tengfei Wang</strong>, Gordon Wetzstein, Dahua Lin, Ziwei Liu
-        </p>
-        <p class="text-sm mt-1"><em>preprint</em>, 2025</p>
-        <div class="mt-2">
-          <a class="link-pill" href="https://arxiv.org/pdf/2503.21745">arXiv</a>
-          <a class="link-pill" href="https://huggingface.co/spaces/ZhangYuhan/3DGen-Arena">arena</a>
-        </div>
-        <p class="text-sm mt-2 paper-takeaway" style="color:var(--accent-red)">Evaluation models with human preference for 3D generative models.</p>
-      </div>
-    </article>
+    
 
     <article class="pcard reveal" data-topics="3d">
       <div class="thumb">
@@ -467,6 +475,8 @@
           <a class="link-pill" href="https://arxiv.org/abs/2412.09593">arXiv</a>
           <a class="link-pill" href="https://github.com/ZexinHe/Neural-LightRig">code</a>
           <a class="link-pill" href="https://projects.zxhezexin.com/neural-lightrig/">project</a>
+        
+          <button class="cite-btn" data-bibtex="@inproceedings{he2025lightrig,\n  title     = {Neural LightRig: Unlocking Accurate Object Normal and Material Estimation with Multi-Light Diffusion},\n  author    = {He, Zexin and Wang, Tengfei and Huang, Xin and Pan, Xingang and Liu, Ziwei},\n  booktitle = {CVPR},\n  year      = {2025}\n}">Cite</button>
         </div>
         <p class="text-sm mt-2 paper-takeaway" style="color:var(--accent-red)">Accurate single-image inverse rendering with multi-light diffusion as virtual light rigs.</p>
       </div>
@@ -486,6 +496,8 @@
           <a class="link-pill" href="https://arxiv.org/abs/2411.16856">arXiv</a>
           <a class="link-pill" href="https://github.com/cyw-3d/SAR3D">code</a>
           <a class="link-pill" href="https://cyw-3d.github.io/projects/SAR3D/">project</a>
+        
+          <button class="cite-btn" data-bibtex="@inproceedings{chen2025sar3d,\n  title     = {SAR3D: Autoregressive 3D Object Generation and Understanding via Multi-scale 3D VQVAE},\n  author    = {Chen, Yongwei and Lan, Yushi and Zhou, Shangchen and Wang, Tengfei and Pan, Xingang},\n  booktitle = {CVPR},\n  year      = {2025}\n}">Cite</button>
         </div>
         <p class="text-sm mt-2 paper-takeaway" style="color:var(--accent-red)">A 3D auto-regressive model for both 3D generation and understanding.</p>
       </div>
@@ -508,6 +520,8 @@
           <a class="link-pill" href="https://arxiv.org/abs/2411.15138">arXiv</a>
           <a class="link-pill" href="https://github.com/3DTopia/MaterialAnything">code</a>
           <a class="link-pill" href="https://xhuangcv.github.io/MaterialAnything/">project</a>
+        
+          <button class="cite-btn" data-bibtex="@inproceedings{huang2025materialanything,\n  title     = {Material Anything: Generating Materials for Any 3D Object via Diffusion},\n  author    = {Huang, Xin and Wang, Tengfei and Liu, Ziwei and Wang, Qing},\n  booktitle = {CVPR},\n  year      = {2025}\n}">Cite</button>
         </div>
         <p class="text-sm mt-2 paper-takeaway" style="color:var(--accent-red)">A diffusion model generating PBR materials for any 3D mesh.</p>
       </div>
@@ -530,6 +544,8 @@
           <a class="link-pill" href="https://github.com/3DTopia/3DTopia-XL">code</a>
           <a class="link-pill" href="https://3dtopia.github.io/3DTopia-XL/">project</a>
           <a class="link-pill" href="https://huggingface.co/spaces/FrozenBurning/3DTopia-XL">demo</a>
+        
+          <button class="cite-btn" data-bibtex="@inproceedings{chen20253dtopiaxl,\n  title     = {3DTopia-XL: High-Quality 3D PBR Asset Generation via Primitive Diffusion},\n  author    = {Chen, Zhaoxi and Tang, Jiaxiang and Dong, Yuhao and Cao, Ziang and Hong, Fangzhou and Lan, Yushi and Wang, Tengfei and Xie, Haozhe and Wu, Tong and Saito, Shunsuke and Pan, Liang and Lin, Dahua and Liu, Ziwei},\n  booktitle = {CVPR},\n  year      = {2025}\n}">Cite</button>
         </div>
         <p class="text-sm mt-2 paper-takeaway" style="color:var(--accent-red)">3D DiT with primitive representation.</p>
       </div>
@@ -550,6 +566,8 @@
           <a class="link-pill" href="https://arxiv.org/abs/2409.11406">arXiv</a>
           <a class="link-pill" href="https://github.com/3DTopia/Phidias-Diffusion">code</a>
           <a class="link-pill" href="https://rag-3d.github.io/">project</a>
+        
+          <button class="cite-btn" data-bibtex="@inproceedings{wang2025phidias,\n  title     = {Phidias: A Generative Model for Creating 3D Content from Text, Image, and 3D Conditions with Reference-Augmented Diffusion},\n  author    = {Wang, Zhenwei and Wang, Tengfei and He, Zexin and Hancke, Gerhard and Liu, Ziwei and Lau, Rynson W.H.},\n  booktitle = {ICLR},\n  year      = {2025}\n}">Cite</button>
         </div>
         <p class="text-sm mt-2 paper-takeaway" style="color:var(--accent-red)">A 3D diffusion model with RAG, supporting 3D generation from text, image, and existing 3D models.</p>
       </div>
@@ -571,6 +589,8 @@
           <a class="link-pill" href="https://arxiv.org/abs/2403.02234">arXiv</a>
           <a class="link-pill" href="https://github.com/3DTopia/3DTopia">code</a>
           <a class="link-pill" href="https://huggingface.co/spaces/hongfz16/3DTopia">demo</a>
+        
+          <button class="cite-btn" data-bibtex="@techreport{hong20243dtopia,\n  title   = {3DTopia: Large Text-to-3D Generation Model},\n  author  = {Hong, Fangzhou and Tang, Jiaxiang and Cao, Ziang and Shi, Min and Wu, Tong and Chen, Zhaoxi and Yang, Shuai and Wang, Tengfei and Pan, Liang and Lin, Dahua and Liu, Ziwei},\n  year    = {2024},\n  url     = {https://arxiv.org/abs/2403.02234}\n}">Cite</button>
         </div>
         <p class="text-sm mt-2 paper-takeaway" style="color:var(--accent-red)">Fast and high-quality text-to-3D generation.</p>
       </div>
@@ -591,6 +611,8 @@
           <a class="link-pill" href="https://arxiv.org/abs/2409.18261">arXiv</a>
           <a class="link-pill" href="https://github.com/3DTopia/Omni6D/">code</a>
           <a class="link-pill" href="https://openxlab.org.cn/datasets/kszpxxzmcwww/Omni6D/">data</a>
+        
+          <button class="cite-btn" data-bibtex="@inproceedings{zhang2024omni6d,\n  title     = {Omni6D: Large-Vocabulary 3D Object Dataset for Category-Level 6D Object Pose Estimation},\n  author    = {Zhang, Mengchen and Wu, Tong and Wang, Tai and Wang, Tengfei and Liu, Ziwei and Lin, Dahua},\n  booktitle = {ECCV},\n  year      = {2024}\n}">Cite</button>
         </div>
         <p class="text-sm mt-2 paper-takeaway" style="color:var(--accent-red)">A large and realistic dataset for 6D pose estimation.</p>
       </div>
@@ -616,6 +638,8 @@
           <a class="link-pill" href="https://github.com/3DTopia/LGM">code</a>
           <a class="link-pill" href="https://me.kiui.moe/lgm/">project</a>
           <a class="link-pill" href="https://huggingface.co/spaces/ashawkey/LGM">demo</a>
+        
+          <button class="cite-btn" data-bibtex="@inproceedings{tang2024lgm,\n  title     = {LGM: Large Multi-View Gaussian Model for High-Resolution 3D Content Creation},\n  author    = {Tang, Jiaxiang and Chen, Zhaoxi and Chen, Xiaokang and Wang, Tengfei and Zeng, Gang and Liu, Ziwei},\n  booktitle = {ECCV},\n  year      = {2024}\n}">Cite</button>
         </div>
         <p class="text-sm mt-2 paper-takeaway" style="color:var(--accent-red)">Fast and high-resolution 3D generative model with 3D Gaussian splatting.</p>
       </div>
@@ -635,6 +659,8 @@
         <div class="mt-2">
           <a class="link-pill" href="https://arxiv.org/abs/2403.12409">arXiv</a>
           <a class="link-pill" href="https://cyw-3d.github.io/ComboVerse/">project</a>
+        
+          <button class="cite-btn" data-bibtex="@inproceedings{chen2024comboverse,\n  title     = {ComboVerse: Compositional 3D Assets Creation Using Spatially-Aware Diffusion Guidance},\n  author    = {Chen, Yongwei and Wang, Tengfei and Wu, Tong and Pan, Xingang and Jia, Kui and Liu, Ziwei},\n  booktitle = {ECCV},\n  year      = {2024}\n}">Cite</button>
         </div>
         <p class="text-sm mt-2 paper-takeaway" style="color:var(--accent-red)">Image-to-3D for compositional scenes and objects.</p>
       </div>
@@ -655,6 +681,8 @@
           <a class="link-pill" href="https://arxiv.org/abs/2403.15383">arXiv</a>
           <a class="link-pill" href="https://github.com/3DTopia/ThemeStation">code</a>
           <a class="link-pill" href="https://3dthemestation.github.io/">project</a>
+        
+          <button class="cite-btn" data-bibtex="@inproceedings{wang2024themestation,\n  title     = {ThemeStation: Generating Theme-Aware 3D Assets from Few Exemplars},\n  author    = {Wang, Zhenwei and Wang, Tengfei and Hancke, Gerhard and Liu, Ziwei and Lau, Rynson W.H.},\n  booktitle = {ACM SIGGRAPH},\n  year      = {2024}\n}">Cite</button>
         </div>
         <p class="text-sm mt-2 paper-takeaway" style="color:var(--accent-red)">Create a gallery of 3D assets with a consistent theme via 3D-to-3D generation.</p>
       </div>
@@ -677,6 +705,8 @@
         <div class="mt-2">
           <a class="link-pill" href="https://github.com/3DTopia/OpenLRM">code</a>
           <a class="link-pill" href="https://huggingface.co/spaces/zxhezexin/OpenLRM">demo</a>
+        
+          <button class="cite-btn" data-bibtex="@techreport{he2023openlrm,\n  title   = {OpenLRM: Open-Source Large Reconstruction Models},\n  author  = {He, Zexin and Wang, Tengfei},\n  year    = {2023},\n  url     = {https://github.com/3DTopia/OpenLRM}\n}">Cite</button>
         </div>
         <p class="text-sm mt-2 paper-takeaway" style="color:var(--accent-red)">Fast image-to-3D generating in a few seconds.</p>
       </div>
@@ -700,6 +730,8 @@
           <a class="link-pill" href="https://arxiv.org/abs/2303.14184">arXiv</a>
           <a class="link-pill" href="https://github.com/junshutang/Make-It-3D">code</a>
           <a class="link-pill" href="https://make-it-3d.github.io/">project</a>
+        
+          <button class="cite-btn" data-bibtex="@inproceedings{tang2023makeit3d,\n  title     = {Make-It-3D: High-Fidelity 3D Creation from A Single Image with Diffusion Prior},\n  author    = {Tang, Junshu and Wang, Tengfei and Zhang, Bo and Zhang, Ting and Yi, Ran and Ma, Lizhuang and Chen, Dong},\n  booktitle = {ICCV},\n  year      = {2023}\n}">Cite</button>
         </div>
         <p class="text-sm mt-2 paper-takeaway" style="color:var(--accent-red)">Generate 3D objects from a single image by distilling 3D knowledge from a 2D diffusion model.</p>
       </div>
@@ -713,7 +745,7 @@
       <div class="flex-1 min-w-0">
         <h3 class="font-bold leading-snug">
           RODIN: A Generative Model for Sculpting 3D Digital Avatars Using Diffusion
-          <span class="badge badge-highlight">Highlight · 2.5%</span>
+          <span class="badge badge-oral">Oral · 2.5%</span>
         </h3>
         <p class="pauthors text-sm mt-1" style="color:var(--text-muted)">
           <strong>Tengfei Wang</strong>, Bo Zhang, Ting Zhang, Shuyang Gu, Jianmin Bao, Tadas Baltrusaitis, Jingjing Shen, Dong Chen, Fang Wen, Qifeng Chen, Baining Guo
@@ -722,6 +754,8 @@
         <div class="mt-2">
           <a class="link-pill" href="https://arxiv.org/abs/2212.06135">arXiv</a>
           <a class="link-pill" href="https://3d-avatar-diffusion.microsoft.com/">project</a>
+        
+          <button class="cite-btn" data-bibtex="@inproceedings{wang2023rodin,\n  title     = {RODIN: A Generative Model for Sculpting 3D Digital Avatars Using Diffusion},\n  author    = {Wang, Tengfei and Zhang, Bo and Zhang, Ting and Gu, Shuyang and Bao, Jianmin and Baltrusaitis, Tadas and Shen, Jingjing and Chen, Dong and Wen, Fang and Chen, Qifeng and Guo, Baining},\n  booktitle = {CVPR},\n  year      = {2023}\n}">Cite</button>
         </div>
         <p class="text-sm mt-2 paper-takeaway" style="color:var(--accent-red)">The first 3D diffusion model for generating high-quality 3D digital avatars as neural radiance fields.</p>
       </div>
@@ -742,6 +776,8 @@
           <a class="link-pill" href="https://arxiv.org/pdf/2211.16927">arXiv</a>
           <a class="link-pill" href="https://github.com/FeiiYin/SPI/">code</a>
           <a class="link-pill" href="https://feiiyin.github.io/SPI/">project</a>
+        
+          <button class="cite-btn" data-bibtex="@inproceedings{yin2023spi,\n  title     = {3D GAN Inversion with Facial Symmetry Prior},\n  author    = {Yin, Fei and Zhang, Yong and Wang, Xuan and Wang, Tengfei and Li, Xiaoyu and Gong, Yuan and Fan, Yanbo and Cun, Xiaodong and Shan, Ying and Oztireli, Cengiz and Yang, Yujiu},\n  booktitle = {CVPR},\n  year      = {2023}\n}">Cite</button>
         </div>
       </div>
     </article>
@@ -759,6 +795,8 @@
         <p class="text-sm mt-1"><em>PhD Thesis · HKUST</em>, 2023</p>
         <div class="mt-2">
           <a class="link-pill" href="https://lbezone.hkust.edu.hk/pdfviewer/web/viewer.php?file=aHR0cHM6Ly9sYmV6b25lLmhrdXN0LmVkdS5oay9vYmovMS9vLzk5MTAxMzIyMjk1NDUwMzQxMi85OTEwMTMyMjI5NTQ1MDM0MTIucGRm#page=1">link</a>
+        
+          <button class="cite-btn" data-bibtex="@phdthesis{wang2023thesis,\n  title  = {High-Quality Visual Content Creation with Foundation Generative Models},\n  author = {Wang, Tengfei},\n  school = {Hong Kong University of Science and Technology},\n  year   = {2023}\n}">Cite</button>
         </div>
         <p class="text-sm mt-2 paper-takeaway" style="color:var(--accent-red)">HKUST CSE Best Dissertation Award · Honorable Mention.</p>
       </div>
@@ -783,6 +821,8 @@
           <a class="link-pill" href="https://github.com/PITI-Synthesis/PITI">code</a>
           <a class="link-pill" href="https://tengfei-wang.github.io/PITI/index.html">project</a>
           <a class="link-pill" href="https://huggingface.co/spaces/tfwang/PITI-Synthesis">demo</a>
+        
+          <button class="cite-btn" data-bibtex="@article{wang2022piti,\n  title   = {Pretraining is All You Need for Image-to-Image Translation},\n  author  = {Wang, Tengfei and Zhang, Ting and Zhang, Bo and Ouyang, Hao and Chen, Dong and Chen, Qifeng and Wen, Fang},\n  journal = {arXiv preprint arXiv:2205.12952},\n  year    = {2022}\n}">Cite</button>
         </div>
         <p class="text-sm mt-2 paper-takeaway" style="color:var(--accent-red)">A universal framework that brings pretraining power to image-to-image translation.</p>
       </div>
@@ -804,6 +844,8 @@
           <a class="link-pill" href="HFGI/index.html">project</a>
           <a class="link-pill" href="https://colab.research.google.com/github/Tengfei-Wang/HFGI/blob/main/HFGI_playground.ipynb">colab</a>
           <a class="link-pill" href="https://replicate.com/tengfei-wang/hfgi">demo</a>
+        
+          <button class="cite-btn" data-bibtex="@inproceedings{wang2022hfgi,\n  title     = {High-Fidelity GAN Inversion for Image Attribute Editing},\n  author    = {Wang, Tengfei and Zhang, Yong and Fan, Yanbo and Wang, Jue and Chen, Qifeng},\n  booktitle = {CVPR},\n  year      = {2022}\n}">Cite</button>
         </div>
         <p class="text-sm mt-2 paper-takeaway" style="color:var(--accent-red)">A novel GAN inversion framework for high-fidelity image and video editing.</p>
       </div>
@@ -824,6 +866,8 @@
           <a class="link-pill" href="https://www.aaai.org/AAAI22Papers/AAAI-2467.OuyangHao.pdf">paper</a>
           <a class="link-pill" href="https://github.com/ken-ouyang/IVOP">code</a>
           <a class="link-pill" href="Restorable-Image-Operator/index.html">project</a>
+        
+          <button class="cite-btn" data-bibtex="@inproceedings{ouyang2022restorable,\n  title     = {Restorable Image Operators with Quasi-Invertible Networks},\n  author    = {Ouyang, Hao and Wang, Tengfei and Chen, Qifeng},\n  booktitle = {AAAI},\n  year      = {2022}\n}">Cite</button>
         </div>
         <p class="text-sm mt-2 paper-takeaway" style="color:var(--accent-red)">A general framework for versatile invertible image processing operators.</p>
       </div>
@@ -850,6 +894,8 @@
           <a class="link-pill" href="https://arxiv.org/abs/2109.01349">arXiv</a>
           <a class="link-pill" href="https://github.com/Tengfei-Wang/DCSR">code</a>
           <a class="link-pill" href="Dual-Camera-SR/index.html">project</a>
+        
+          <button class="cite-btn" data-bibtex="@inproceedings{wang2021dcsr,\n  title     = {Dual-Camera Super-Resolution with Aligned Attention Modules},\n  author    = {Wang, Tengfei and Xie, Jiaxin and Sun, Wenxiu and Yan, Qiong and Chen, Qifeng},\n  booktitle = {ICCV},\n  year      = {2021}\n}">Cite</button>
         </div>
         <p class="text-sm mt-2 paper-takeaway" style="color:var(--accent-red)">First real-world dual-camera super-resolution approach; new dual-camera zoom dataset.</p>
       </div>
@@ -870,6 +916,8 @@
           <a class="link-pill" href="https://arxiv.org/abs/2108.01912">arXiv</a>
           <a class="link-pill" href="https://github.com/Tengfei-Wang/Implicit-Internal-Video-Inpainting">code</a>
           <a class="link-pill" href="Implicit-Internal-Video-Inpainting/index.html">project</a>
+        
+          <button class="cite-btn" data-bibtex="@inproceedings{ouyang2021implicit,\n  title     = {Internal Video Inpainting by Implicit Long-range Propagation},\n  author    = {Ouyang, Hao and Wang, Tengfei and Chen, Qifeng},\n  booktitle = {ICCV},\n  year      = {2021}\n}">Cite</button>
         </div>
         <p class="text-sm mt-2 paper-takeaway" style="color:var(--accent-red)">Effective video inpainting for videos from arbitrary domains; no training set or pretrained models needed.</p>
       </div>
@@ -890,6 +938,8 @@
           <a class="link-pill" href="https://arxiv.org/abs/2104.09068">arXiv</a>
           <a class="link-pill" href="https://github.com/Tengfei-Wang/external-internal-inpainting">code</a>
           <a class="link-pill" href="EII/index.html">project</a>
+        
+          <button class="cite-btn" data-bibtex="@inproceedings{wang2021eii,\n  title     = {Image Inpainting with External-Internal Learning and Monochromic Bottleneck},\n  author    = {Wang, Tengfei and Ouyang, Hao and Chen, Qifeng},\n  booktitle = {CVPR},\n  year      = {2021}\n}">Cite</button>
         </div>
         <p class="text-sm mt-2 paper-takeaway" style="color:var(--accent-red)">A novel internal-learning method for guided image colorization.</p>
       </div>
@@ -944,6 +994,13 @@
   </div>
 </footer>
 
+
+<button id="back-to-top" aria-label="Back to top" title="Back to top">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="17 11 12 6 7 11"/>
+    <polyline points="17 18 12 13 7 18"/>
+  </svg>
+</button>
 </main>
 
 <script src="script.js" defer></script>
