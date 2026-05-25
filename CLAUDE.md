@@ -2,6 +2,10 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Git Workflow
+
+Never push to remote (git push) without explicit user permission. Stage and commit locally only unless told otherwise.
+
 ## Overview
 
 Tengfei Wang's academic personal website (`Tengfei-Wang.github.io`), a **static site hosted on GitHub Pages** with no build step. The main page was refactored from the Jon Barron `<table>` template to a modern Tailwind CDN + card grid layout.
