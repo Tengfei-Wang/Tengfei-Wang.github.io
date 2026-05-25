@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://tengfei-wang.github.io/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://tengfei-wang.github.io/HFGI/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://tengfei-wang.github.io/PITI/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://tengfei-wang.github.io/Implicit-Internal-Video-Inpainting/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://tengfei-wang.github.io/EII/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://tengfei-wang.github.io/Dual-Camera-SR/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://tengfei-wang.github.io/Restorable-Image-Operator/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://tengfei-wang.github.io/HY-World-2.0-Service/</loc>
+    <priority>0.6</priority>
+  </url>
+</urlset>
